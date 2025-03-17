@@ -1,0 +1,81 @@
+[
+    {
+        "id": 1,
+        "name": "Java Image Postprocessing - Pixel Manipulation",
+        "language": "Java",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Image filter",
+                "description": "Designed and developed an image filter generator which uses an Evolution algorithm to recreate an image with a box-filter. "
+            },
+            {
+                "id": 2,
+                "name": "GUI",
+                "description": "Designed a user interface which uses Java Swing to visualise the generation process. The user can save the generated image as well as the generation process as a video."
+            }
+        ],
+        "multimedia": [
+            {
+                "type": "video",
+                "link": "https://github.com/jonesyu30/Image-Evolution/assets/66526414/7914a160-2362-4355-955a-f620cfaf331f"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Tetris Blossom ❀ - A Tetris Clone",
+        "language": "Python",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Group Project",
+                "description": "Collaborate with a group of teammates by sharing the workload to maximise the efficiency. "
+            },
+            {
+                "id": 2,
+                "name": "Game Design",
+                "description": "Designed and developed a Python console Tetris game without any external libraries which generates a real time response. "
+            },
+            {
+                "id": 3,
+                "name": "Score",
+                "description": "Obtained grade A in Group Project of ENGG1330 - Computer Programming."
+            }
+        ],
+        "multimedia": [
+            {
+                "type": "none",
+                "link": "N/A"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Automatic Notice Scrapper for Scouts - A Discord Bot",
+        "language": "Node.js",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Web Scrapping",
+                "description": "Created HTML request once per day to get update from website. "
+            },
+            {
+                "id": 2,
+                "name": "Discord Bot",
+                "description": "Designed and developed a Discord bot that notifies users whenever a new notice is created using Discord.js."
+            },
+            {
+                "id": 3,
+                "name": "Marketing",
+                "description": "Recorded and edited a playlist of 4 YouTube videos to showcase the progresses and results."
+            }
+        ],
+        "multimedia": [
+            {
+                "type": "youtube",
+                "link": "https://www.youtube.com/embed/wzCNy71EyDc"
+            }
+        ]
+    }
+]
