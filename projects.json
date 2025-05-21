@@ -48,7 +48,7 @@
             {
                 "id": 1,
                 "name": "Web Scrapping",
-                "description": "Created HTML request once per day to get update from website. "
+                "description": "Scheduled an HTTP request everyday to scrap updates from the notice website. "
             },
             {
                 "id": 2,
@@ -81,7 +81,7 @@
             {
                 "id": 3,
                 "name": "Leaderboard",
-                "description": "Designed and implemented a leaderboard, which uses insertion sort and bubble sort to ensure the rankings are accurate."
+                "description": "Implemented a leaderboard system, which uses insertion and bubble sort to ensure accurate rankings."
             }
         ],
         "image": "./assets/images/pascal-maze.png"
