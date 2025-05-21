@@ -85,5 +85,28 @@
             }
         ],
         "image": "./assets/images/pascal-maze.png"
+    },
+    {
+        "id": 5,
+        "name": "Terra Verde Dungeon - A console based Dungeon Game",
+        "language": "C++",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Version Control",
+                "description": "Worked in a group of 4, which used Github version control to track changes from each teammates. "
+            },
+            {
+                "id": 2,
+                "name": "Data Structure",
+                "description": "Used various data structures including maps and classes to effectivly store information in different aspect of the game."
+            },
+            {
+                "id": 3,
+                "name": "Multithreading",
+                "description": "Implemented a real time boss fight using multiple threads to seperatly handle the Boss AI, Player input, and Rendering."
+            }
+        ],
+        "image": "./assets/images/dungeon-game.png"
     }
 ]

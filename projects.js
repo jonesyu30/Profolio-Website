@@ -17,8 +17,9 @@ function writeProjects(projects) {
         projectElement.innerHTML = "<h3>" + project.name + "</h3><p>" + project.language + "</p>";
 
         //Add the image with styling to fit coherently in the card
+        const imageHeight = "250px"; // You can adjust this value as needed
         projectElement.innerHTML += "<div style='padding: 5px; margin: 20px 0; border-radius: 10px; overflow: hidden;'>" +
-                       "<img src='" + project.image + "' alt='Project Image' style='width: 100%; height: 100%; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>" +
+                       "<img src='" + project.image + "' alt='Project Image' style=' width:100%; height: " + imageHeight + "; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>" +
                        "</div>";
         // projectElement.innerHTML += "<img src='" + project.image + "' alt='Project Image' style='width: 100%; height: auto;'>";
 
