@@ -15,16 +15,11 @@
                 "description": "Designed a user interface which uses Java Swing to visualise the generation process. The user can save the generated image as well as the generation process as a video."
             }
         ],
-        "multimedia": [
-            {
-                "type": "video",
-                "link": "https://github.com/jonesyu30/Image-Evolution/assets/66526414/7914a160-2362-4355-955a-f620cfaf331f"
-            }
-        ]
+        "image": "./assets/images/java-image-postprocessing.png"
     },
     {
         "id": 2,
-        "name": "Tetris Blossom ❀ - A Tetris Clone",
+        "name": "Tetris Blossom ❀ - A Terminal Tetris Clone",
         "language": "Python",
         "tasks": [
             {
@@ -43,12 +38,7 @@
                 "description": "Obtained grade A in Group Project of ENGG1330 - Computer Programming."
             }
         ],
-        "multimedia": [
-            {
-                "type": "none",
-                "link": "N/A"
-            }
-        ]
+        "image": "./assets/images/tetris-blossom.png"
     },
     {
         "id": 3,
@@ -71,11 +61,29 @@
                 "description": "Recorded and edited a playlist of 4 YouTube videos to showcase the progresses and results."
             }
         ],
-        "multimedia": [
+        "image": "./assets/images/automatic-notice-scrapper.png"
+    },
+    {
+        "id": 4,
+        "name": "Pascal Maze - A 2D Terminal Maze Game",
+        "language": "Pascal",
+        "tasks": [
             {
-                "type": "youtube",
-                "link": "https://www.youtube.com/embed/wzCNy71EyDc"
+                "id": 1,
+                "name": "Algorithm",
+                "description": "Designed and created a console maze game in Pascal, which uses the depth first search algorithm to generate random mazes. "
+            },
+            {
+                "id": 2,
+                "name": "Documentation",
+                "description": "Documented the code and created a user manual to explain how to play the game."
+            },
+            {
+                "id": 3,
+                "name": "Leaderboard",
+                "description": "Designed and implemented a leaderboard, which uses insertion sort and bubble sort to ensure the rankings are accurate."
             }
-        ]
+        ],
+        "image": "./assets/images/pascal-maze.png"
     }
 ]

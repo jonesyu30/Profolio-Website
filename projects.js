@@ -16,17 +16,11 @@ function writeProjects(projects) {
         // Add the project name and language
         projectElement.innerHTML = "<h3>" + project.name + "</h3><p>" + project.language + "</p>";
 
-        //Add the multimedia
-        for(var j = 0; j < project.multimedia.length; j++) {
-            var multimedia = project.multimedia[j];
-            if(multimedia.type == "image") {
-                projectElement.innerHTML += "<img src='" + multimedia.link + "' alt='Project Image'>";
-            }else if(multimedia.type == "video") {
-                projectElement.innerHTML += "<video controls><source src='" + multimedia.link + "' type='video/mp4'></video>";
-            }else if (multimedia.type == "youtube") {
-                projectElement.innerHTML += "<iframe src='" + multimedia.link + "' frameborder='0' controls='0' allowfullscreen> referrerpolicy='strict-origin-when-cross-origin'</iframe>";
-            }
-        }
+        //Add the image with styling to fit coherently in the card
+        projectElement.innerHTML += "<div style='padding: 5px; margin: 20px 0; border-radius: 10px; overflow: hidden;'>" +
+                       "<img src='" + project.image + "' alt='Project Image' style='width: 100%; height: 100%; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>" +
+                       "</div>";
+        // projectElement.innerHTML += "<img src='" + project.image + "' alt='Project Image' style='width: 100%; height: auto;'>";
 
         // Add the tasks
         for(var j = 0; j < project.tasks.length; j++) {
