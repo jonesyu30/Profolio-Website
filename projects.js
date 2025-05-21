@@ -24,7 +24,7 @@ function writeProjects(projects) {
             }else if(multimedia.type == "video") {
                 projectElement.innerHTML += "<video controls><source src='" + multimedia.link + "' type='video/mp4'></video>";
             }else if (multimedia.type == "youtube") {
-                projectElement.innerHTML += "<iframe src='" + multimedia.link + "' frameborder='0' controls='0' allowfullscreen></iframe>";
+                projectElement.innerHTML += "<iframe src='" + multimedia.link + "' frameborder='0' controls='0' allowfullscreen> referrerpolicy='strict-origin-when-cross-origin'</iframe>";
             }
         }
 

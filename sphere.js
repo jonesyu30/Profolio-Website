@@ -13,7 +13,7 @@ class Sphere{
         this.div.style.height = radius + "px";
         
         // dim color according to the radius
-        var dim = -Math.floor(radius / 3);
+        var dim = -Math.floor(radius / 4);
         var r = Math.floor(parseInt(color.slice(5, 8)) - dim);
         var g = Math.floor(parseInt(color.slice(10, 13)) - dim);
         var b = Math.floor(parseInt(color.slice(15, 18)) - dim);
@@ -29,8 +29,9 @@ class Sphere{
     }
 
     update(){
-        this.div.style.left = this.x + "vw";
-        this.div.style.top = this.y + "vh";
+        this.div.style.transform = `translate(${this.x - this.startX}vw, ${this.y - this.startY}vh)`;
+        // this.div.style.left = this.x + "vw";
+        // this.div.style.top = this.y + "vh";
         this.div.style.zIndex = -this.radius;
     }
     move(y) {
@@ -44,15 +45,14 @@ class Sphere{
 }
 Sphere.SPHERES = [];
 Sphere.SPHERES.scroll = function(distance) {
-    for (var i = 0; i < Sphere.SPHERES.length; i++) {
-        var sphere = Sphere.SPHERES[i];
+    Sphere.SPHERES.forEach(function(sphere) {
         sphere.move(distance);
-    }
+    });
 }
 
 // Create background spheres
 function createSphere() {
-    var sphere = new Sphere(Math.random() * 110, Math.random() * 110, Math.random() * 100 + 10, "rgba(236, 173, 0)");
+    var sphere = new Sphere(Math.random() * 110, Math.random() * 110, Math.random() * 150 + 10, "rgba(236, 173, 0)");
     document.getElementById("background").appendChild(sphere.div);
 }
 
