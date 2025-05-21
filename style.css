@@ -68,6 +68,10 @@ section {
 }
 
 /* Projects Section */
+.section-title {
+    text-align: center;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,6 +85,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform .3s ease, background-color .3s ease;
+    text-align: left;
 }
 
 .project-card:hover {
