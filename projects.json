@@ -15,7 +15,8 @@
                 "description": "Designed a user interface which uses Java Swing to visualise the generation process. The user can save the generated image as well as the generation process as a video."
             }
         ],
-        "image": "./assets/images/java-image-postprocessing.png"
+        "image": "./assets/images/java-image-postprocessing.png",
+        "link": "java-image-postprocessing.html"
     },
     {
         "id": 2,
