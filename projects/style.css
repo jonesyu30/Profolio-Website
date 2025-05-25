@@ -1,9 +1,9 @@
 h2{
-    padding-top: 1em;
+    padding-top: 1rem;
 }
 .chapters{
     margin: auto;
-    padding: 1em;
+    padding: 1rem;
     max-width: 850px;
     background-color: white;
     width:100%;
@@ -11,8 +11,7 @@ h2{
 }
 
 p{
-    font-size: large;
-    padding: 1em;
+    padding: 1rem;
 }
 
 ol {
@@ -32,4 +31,32 @@ img{
     display: block;
     height: auto;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+    img {
+        max-width: 100%;
+    }
+    
+    .chapters {
+        padding: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    
+    footer {
+        font-size: 0.8rem;
+    }
+    ol {
+        padding-left: 2rem;
+        font-size:0.9rem;
+    }
 }
