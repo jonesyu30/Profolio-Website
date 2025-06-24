@@ -62,7 +62,8 @@
                 "description": "Recorded and edited a playlist of 4 YouTube videos to showcase the progresses and results."
             }
         ],
-        "image": "./assets/images/automatic-notice-scrapper.png"
+        "image": "./assets/images/automatic-notice-scrapper.png",
+        "link": "discord-bot.html"
     },
     {
         "id": 4,
