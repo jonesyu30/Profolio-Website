@@ -188,6 +188,11 @@ button:hover {
     z-index: -10;
 }
 
+a{
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 850px) {
     body {
         font-size: medium;

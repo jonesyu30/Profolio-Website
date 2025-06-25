@@ -18,10 +18,11 @@ function writeProjects(projects) {
 
         //Add the image with styling to fit coherently in the card
         const imageHeight = "250px"; // You can adjust this value as needed
-        projectElement.innerHTML = `<img src='${project.image}' alt='Project Image' style=' width:100%; height: ${imageHeight}; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>`;
-        project.link && (projectElement.innerHTML = `<a href='./projects/${project.link}'> ${projectElement.innerHTML} </a>`);
-        // I made the previous line with AI, so cool~
-        projectElement.innerHTML = `<div style='padding: 5px; margin: 20px 0; border-radius: 10px; overflow: hidden;'> ${projectElement.innerHTML} </div>`;
+        var imageHTML = `<img src='${project.image}' alt='Project Image' style=' width:100%; height: ${imageHeight}; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>`;
+        project.link && (imageHTML = `<a href='./projects/${project.link}'> ${imageHTML} </a>`);
+        // I made the previous line without AI, so cool~
+        imageHTML = `<div style='padding: 5px; margin: 20px 0; border-radius: 10px; overflow: hidden;'> ${imageHTML} </div>`;
+        projectElement.innerHTML += imageHTML;
         // projectElement.innerHTML += "<img src='" + project.image + "' alt='Project Image' style='width: 100%; height: auto;'>";
 
         // Add the tasks
