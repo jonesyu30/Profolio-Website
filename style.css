@@ -1,10 +1,11 @@
 :root {
-    --primary-color: #b8703c;
+    --primary-color: #ffb783;
     --primary-color-semi-transparent: rgba(184, 112, 60, 0.8);
     --secondary-color: #ffdf3d;
     --secondary-color-semi-transparent: rgba(255, 223, 61, 0.8);
     --dark-color: #2c3e50;
     --light-color: #ffeed4;
+    --dark-color-semi-transparent: rgba(44, 62, 80, 0.8);
 }
 
 * {
@@ -26,7 +27,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(255, 231, 189);
+    background-color: var(--light-color);
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -59,7 +60,7 @@ section {
 /* Hero Section */
 #hero {
     background: linear-gradient(135deg, var(--primary-color-semi-transparent), var(--secondary-color-semi-transparent));
-    color: rgb(255, 255, 255);
+    color: var(--light-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,17 +82,18 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: var(--light-color-semi-transparent);
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform .3s ease, background-color .3s ease;
+    /* box-shadow: 0 3px 10px var(--primary-color-semi-transparent); */
+    transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease;
     text-align: left;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    background-color: #ffff9f;
+    box-shadow: 0 3px 10px var(--dark-color);
+    background-color: var(--light-color);
 }
 
 .contact-form {
@@ -107,9 +109,10 @@ input,
 textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--dark-color);
     border-radius: 5px;
     margin-top: 0.5rem;
+    background-color: var(--light-color);
 }
 
 button {
