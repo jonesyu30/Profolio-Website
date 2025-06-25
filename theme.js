@@ -16,7 +16,8 @@ function addCss(fileName) {
 var currentTheme = localStorage.getItem("Theme") || "light";
 if (currentTheme === "dark") {
   console.log("Dark theme detected");
-  addCss("/style-dark.css");
+  addCss("../style-dark.css");
+  addCss("./style-dark.css");
 }
 
 
@@ -24,11 +25,9 @@ function toggleTheme() {
   var currentTheme = localStorage.getItem("Theme") || "light";
   if (currentTheme === "light") {
     currentTheme = "dark";
-    addCss("/style-dark.css");
   }
   else {
     currentTheme = "light";
-    addCss("/style.css");
   }
   localStorage.setItem("Theme", currentTheme);
   location.reload();
