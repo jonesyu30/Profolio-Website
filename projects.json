@@ -110,5 +110,29 @@
             }
         ],
         "image": "./assets/images/dungeon-game.png"
+    },
+    {
+        "id": 6,
+        "name": "W.A.W.L. - A platform to Make Art With LOVE.",
+        "language": "HTML/CSS/JavaScript",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Serverless Application",
+                "description": "Designed a serverless web application using Peer.JS to allow collaboration in drawing with friends and partner."
+            },
+            {
+                "id": 2,
+                "name": "Mobile Friendly",
+                "description": "Incorperated designs to ensure the application is mobile friendly, allowing users to draw on their phones."
+            },
+            {
+                "id": 3,
+                "name": "Clear Documentation",
+                "description": "Documented the code and features, with a user manual in README.MD file to explain how to use the application as well as the technologies used."
+            }
+        ],
+        "image": "https://raw.githubusercontent.com/jonesyu30/MAWL/main/assets/08a69412-dd0d-46e1-aae4-36f4e3088e47.sketchpad-2.png",
+        "link": "https://github.com/jonesyu30/MAWL/blob/main/README.md"
     }
 ]
