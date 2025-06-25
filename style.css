@@ -1,7 +1,7 @@
 :root {
     --primary-color: #ffb783;
     --primary-color-semi-transparent: rgba(184, 112, 60, 0.8);
-    --secondary-color: #ffdf3d;
+    --secondary-color: #a35f00;
     --secondary-color-semi-transparent: rgba(255, 223, 61, 0.8);
     --dark-color: #2c3e50;
     --light-color: #ffeed4;
@@ -112,11 +112,12 @@ textarea {
     border: 1px solid var(--dark-color);
     border-radius: 5px;
     margin-top: 0.5rem;
+    color:var(--dark-color);
     background-color: var(--light-color);
 }
 
 button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-semi-transparent);
     color: white;
     padding: 0.8rem 2rem;
     border: none;
@@ -144,6 +145,18 @@ button:hover {
 
 .social-links a:hover {
     color: var(--primary-color);
+}
+
+.theme-toggle {
+    bottom: 1rem;
+    left: 1rem;
+    height: 50px;
+    width: 50px;
+    background-color: var(--dark-color-semi-transparent);
+    border-radius: 50%;
+    position: absolute;
+    padding: 0rem 0rem;
+    border-radius: 5px;
 }
 
 /* Responsive Design */

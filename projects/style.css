@@ -5,7 +5,7 @@ h2{
     margin: auto;
     padding: 1rem;
     max-width: 850px;
-    background-color: white;
+    background-color: var(--light-color);
     width:100%;
     border-radius: 10px;
 }
