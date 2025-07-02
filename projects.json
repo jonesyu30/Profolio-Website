@@ -136,5 +136,53 @@
         ],
         "image": "https://raw.githubusercontent.com/jonesyu30/MAWL/main/assets/08a69412-dd0d-46e1-aae4-36f4e3088e47.sketchpad-2.png",
         "link": "https://github.com/jonesyu30/MAWL/blob/main/README.md"
+    },
+    {
+        "id": 7,
+        "name": "N.G.L. Convo - Anonymous conversation for Instagram",
+        "language": "Next.js/MongoDB",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Database Management",
+                "description": "Designed and implemented a MongoDB database structure to store user data and conversation history, ensuring data integrity and security."
+            },
+            {
+                "id": 2,
+                "name": "Next.js API Routes",
+                "description": "Utilised Next.js API routes to handle server-side logic, including user message retrieval, and storage."
+            },
+            {
+                "id": 3,
+                "name": "Vercel hosting",
+                "description": "Deployed the application on Vercel, ensuring fast and reliable hosting with automatic scaling capabilities."
+            }
+        ],
+        "image": "https://ngl-convo.vercel.app/icon.ico",
+        "link": "https://ngl-convo.vercel.app"
+    },
+    {
+        "id": 8,
+        "name": "Portfolio Website - You Chung Yau's Portfolio",
+        "language": "HTML/CSS/JavaScript",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Static Site Generator",
+                "description": "Developed a static site generator using Node.js to create a fast and efficient portfolio website, optimised for performance and SEO."
+            },
+            {
+                "id": 2,
+                "name": "Responsive Design",
+                "description": "Developed a responsive design using CSS to ensure the website is accessible on various devices, including desktops, tablets, and smartphones."
+            },
+            {
+                "id": 3,
+                "name": "Dark/Light Mode",
+                "description": "Implemented a dark/light mode toggle using JavaScript, allowing users to switch between themes for a personalised viewing experience."
+            }
+        ],
+        "image": "./assets/images/profolio.jpeg",
+        "link": "https://github.com/jonesyu30"
     }
 ]
