@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="stylesheet" href="./style-dark.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="./theme.js"></script>
-    <script src="./projects.js"></script>
+    <script src="./theme.js" defer></script>
+    <script src="./projects.js"defer></script>
+    <script src="./contact-me.js"defer></script>
 
     <link rel="icon" href="./assets/images/profolio.jpeg" type="image/jpeg">
 
@@ -64,7 +65,7 @@
     <section id="hero">
         <h4>Jones</h4>
         <h1>Yu Chung Yau</h1>
-        <p>First-year student of the Bachelor of Engineering - Computer Science</p>
+        <p>First-year student in BEng(CompSci)</p>
     </section>
 
     <!-- Projects Section -->
@@ -121,15 +122,15 @@
         <h2 class="section-title">Contact Me</h2>
         <form class="contact-form">
             <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
+                <input id="name-input" type="text" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Your Email" required>
+                <input id="email-input" type="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <textarea id="message-input" rows="5" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit" onclick="handleFormSubmit(event)">Send Message</button>
         </form>
         <div class="social-links">
             <a href="https://github.com/jonesyu30" target=”_blank”><i class="fab fa-github"></i></a>
@@ -139,7 +140,7 @@
     </section>
 
     <!-- light/dark mode -->
-    <button class="theme-toggle" onclick="toggleTheme()">
+    <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
         <i class="fa-solid fa-sun"></i>
         /
         <i class="fa-solid fa-moon"></i>

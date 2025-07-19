@@ -43,7 +43,24 @@ body {
     text-decoration: none;
     color: var(--dark-color);
     padding: 0.5rem 1rem;
-    transition: all 0.3s;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-out;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
@@ -56,7 +73,6 @@ section {
     min-height: 100vh;
     padding-top: 4rem;
 }
-
 /* Hero Section */
 #hero {
     background: linear-gradient(135deg, var(--primary-color-semi-transparent), var(--secondary-color-semi-transparent));
@@ -67,7 +83,69 @@ section {
     align-items: center;
     text-align: center;
 }
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
 
+#hero h4 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes easeInFromBelow {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Projects Section */
 .section-title {
     text-align: center;
@@ -112,7 +190,7 @@ textarea {
     border: 1px solid var(--dark-color);
     border-radius: 5px;
     margin-top: 0.5rem;
-    color:var(--dark-color);
+    color: var(--dark-color);
     background-color: var(--light-color);
 }
 
@@ -188,7 +266,7 @@ button:hover {
     z-index: -10;
 }
 
-a{
+a {
     color: var(--dark-color);
     text-decoration: none;
 }
