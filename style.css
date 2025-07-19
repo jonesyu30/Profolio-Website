@@ -272,6 +272,18 @@ a {
 }
 
 @media only screen and (max-width: 850px) {
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero h4 {
+        font-size: 1.2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
     body {
         font-size: medium;
     }
