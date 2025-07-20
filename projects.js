@@ -4,7 +4,8 @@
 async function readJson() {
     const response = await fetch("projects.json");
     const json = await response.json();
-    return json;
+    const shuffled = json.sort(() => Math.random() - 0.5);
+    return shuffled;
 }
 function writeProjects(projects) {
     var projectSection = document.getElementById("projects-grid");
@@ -18,7 +19,7 @@ function writeProjects(projects) {
 
         //Add the image with styling to fit coherently in the card
         const imageHeight = "250px"; // You can adjust this value as needed
-        var imageHTML = `<img src='${project.image}' alt='Project Image' style=' width:100%; height: ${imageHeight}; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>`;
+        var imageHTML = `<img src='${project.image}' alt='Project Image'>`;
 
         const link = project.link;
         if (link) {
@@ -37,7 +38,7 @@ function writeProjects(projects) {
         // Add the tasks
         for (var j = 0; j < project.tasks.length; j++) {
             var task = project.tasks[j];
-            projectElement.innerHTML += "<p><b>" + task.name + "</b></p>";
+            projectElement.innerHTML += "<h4><b>" + task.name + "</b></h4>";
             projectElement.innerHTML += "<p>" + task.description + "</p>";
         }
         if (link) {

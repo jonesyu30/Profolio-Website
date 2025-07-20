@@ -75,6 +75,7 @@ section {
     min-height: 100svh;
     padding-top: 4rem;
 }
+
 /* Hero Section */
 #hero {
     background: linear-gradient(135deg, var(--primary-color-semi-transparent), var(--secondary-color-semi-transparent));
@@ -85,6 +86,7 @@ section {
     align-items: center;
     text-align: center;
 }
+
 #hero::before {
     content: '';
     position: absolute;
@@ -117,8 +119,10 @@ section {
     margin: 0 auto;
     animation: fadeInUp 1s ease-out 0.4s forwards;
     opacity: 0;
+    color: var(--dark-color);
     transform: translateY(20px);
 }
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -131,6 +135,7 @@ section {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -143,6 +148,7 @@ section {
         transform: translateY(20px);
 
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -172,31 +178,34 @@ section {
     /* Layout & Spacing */
     padding: 1rem;
     text-align: left;
-    
+
     /* Visual Design */
     background: var(--light-color-semi-transparent);
     border: 1px solid var(--dark-color-semi-transparent);
     border-radius: 10px;
-    
+
     /* Interactive Effects */
-    transition: transform 0.3s ease, 
-                background-color 0.3s ease, 
-                box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 
     position: relative;
 }
 
 /* Project Card Hover Effects */
-.project-card:hover, .project-card:focus, .project-card:active {
+.project-card:hover,
+.project-card:focus,
+.project-card:active {
     /* Lift effect */
     transform: translateY(-5px);
-    
+
     /* Enhanced shadow and background */
-    box-shadow: 3px 3px 0px var(--light-color-semi-transparent), 
-                4px 4px 0px var(--dark-color-semi-transparent);
+    box-shadow: 3px 3px 0px var(--light-color-semi-transparent),
+        4px 4px 0px var(--dark-color-semi-transparent);
     background-color: var(--light-color);
 }
-.project-card a{
+
+.project-card a {
     display: block;
     text-align: right;
     position: relative;
@@ -204,6 +213,25 @@ section {
     right: 0;
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+.project-card h4 {
+    text-decoration: underline;
+}
+
+.project-card p {
+    margin: 0.5rem 0;
+    color: var(--dark-color-semi-transparent);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--dark-color-semi-transparent);
 }
 
 .contact-form {
@@ -215,7 +243,8 @@ section {
     margin-bottom: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid var(--dark-color);
@@ -224,15 +253,20 @@ input, textarea {
     color: var(--icon-color);
     background-color: var(--light-color);
     transition: border-color 0.3s;
-    padding-left: 35px; /* For icon spacing */
+    padding-left: 35px;
+    /* For icon spacing */
 }
-input:focus, textarea:focus {
+
+input:focus,
+textarea:focus {
     border-color: var(--primary-color);
     outline: none;
 }
+
 .form-group {
     position: relative;
 }
+
 .form-group i[id="user-icon"] {
     position: absolute;
     left: 13px;
@@ -240,6 +274,7 @@ input:focus, textarea:focus {
     transform: translateY(-50%);
     color: var(--icon-color);
 }
+
 .form-group i[id="email-icon"] {
     position: absolute;
     left: 11px;
@@ -247,6 +282,7 @@ input:focus, textarea:focus {
     transform: translateY(-50%);
     color: var(--icon-color);
 }
+
 .form-group i[id="message-icon"] {
     position: absolute;
     left: 12px;
@@ -299,6 +335,7 @@ button:hover {
     padding: 0rem 0rem;
     border-radius: 5px;
 }
+
 .theme-toggle:hover {
     background-color: rgb(80, 80, 80);
 }
@@ -342,9 +379,11 @@ a {
     #hero h1 {
         font-size: 2rem;
     }
+
     #hero h4 {
         font-size: 1.2rem;
     }
+
     #hero p {
         font-size: 1rem;
         max-width: 90%;
@@ -442,6 +481,11 @@ button .fa-spinner {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
