@@ -32,6 +32,13 @@ img{
     height: auto;
     border-radius: 10px;
 }
+
+a{
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 .back-home-link{
     display: block;
     text-align: right;

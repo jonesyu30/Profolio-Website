@@ -119,7 +119,6 @@ section {
     margin: 0 auto;
     animation: fadeInUp 1s ease-out 0.4s forwards;
     opacity: 0;
-    color: var(--dark-color);
     transform: translateY(20px);
 }
 
