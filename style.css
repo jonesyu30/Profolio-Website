@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     line-height: 1.6;
     font-size: large;
     background-color: var(--light-color);
@@ -146,12 +146,18 @@ section {
         transform: translateY(0);
     }
 }
-/* Projects Section */
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+
+/* Section Title Styling */
 .section-title {
     text-align: center;
     font-size: 2rem;
 }
 
+/* Projects Grid Layout */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -159,17 +165,28 @@ section {
     margin-top: 2rem;
 }
 
+/* Individual Project Card Styling */
 .project-card {
-    background: var(--light-color-semi-transparent);
+    /* Layout & Spacing */
     padding: 1rem;
-    border-radius: 10px;
-    /* box-shadow: 0 3px 10px var(--primary-color-semi-transparent); */
-    transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease;
     text-align: left;
+    
+    /* Visual Design */
+    background: var(--light-color-semi-transparent);
+    border-radius: 10px;
+    
+    /* Interactive Effects */
+    transition: transform 0.3s ease, 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
 }
 
+/* Project Card Hover Effects */
 .project-card:hover {
+    /* Lift effect */
     transform: translateY(-5px);
+    
+    /* Enhanced shadow and background */
     box-shadow: 0 3px 10px var(--dark-color);
     background-color: var(--light-color);
 }
