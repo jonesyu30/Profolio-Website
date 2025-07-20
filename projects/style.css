@@ -49,14 +49,14 @@ a{
 
 #hero{
     position: relative;
-    color: var(--dark-color);
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-blend-mode: multiply;
+    background-blend-mode: add;
     aspect-ratio: auto;
     min-height: 100svh;
+    text-shadow: #53575b 1px 0px 5px;
 }
 
 @media only screen and (max-width: 850px) {

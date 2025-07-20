@@ -1,6 +1,6 @@
 Java Image Postprocessing
 Box Filter - Evolution Algorithm
-
+../assets/images/java-image-postprocessing.png
 
 ##Chapter 0: The Background
 The thing I like about JAVA, is it's cross-platform availibility. I can wirte the program in one platform, without worrying the difference when running in other OS. As long as the user has Java installed, the program will run. Especially when it comes to GUI, the low level code controlling input and output system is always different across OS.
