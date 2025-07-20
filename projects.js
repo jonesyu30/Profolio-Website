@@ -1,5 +1,3 @@
-// Load projects from the database to the page. 
-
 // Load the data from the JSON file
 async function readJson() {
     const response = await fetch("projects.json");
