@@ -58,6 +58,12 @@ a{
     min-height: 100svh;
     text-shadow: #53575b 1px 0px 5px;
 }
+iframe{
+    margin: auto;
+    display: block;
+    height: 50svh;
+    width: 80%;
+}
 
 @media only screen and (max-width: 850px) {
     img {

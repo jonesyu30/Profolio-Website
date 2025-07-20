@@ -113,7 +113,7 @@ const PROJECT_JSON = [
             }
         ],
         "image": "./assets/images/dungeon-game.png",
-        "link": "https://youtu.be/Mpx_Lhd81ao?si=J1ORKJHtw7NbaN8Z"
+        "link": "dungeon-game.html"
     },
     {
         "id": 6,
