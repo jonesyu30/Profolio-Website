@@ -21,10 +21,10 @@ function writeProjects(projects) {
         var imageHTML = `<img src='${project.image}' alt='Project Image' style=' width:100%; height: ${imageHeight}; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>`;
 
         const link = project.link;
-        if(link) {
-            if(link.startsWith("http")) {
+        if (link) {
+            if (link.startsWith("http")) {
                 imageHTML = `<a href='${link}' target='_blank'> ${imageHTML} </a>`;
-            }else{
+            } else {
                 imageHTML = `<a href='./projects/${project.link}'> ${imageHTML} </a>`;
             }
         }
@@ -35,10 +35,17 @@ function writeProjects(projects) {
         // projectElement.innerHTML += "<img src='" + project.image + "' alt='Project Image' style='width: 100%; height: auto;'>";
 
         // Add the tasks
-        for(var j = 0; j < project.tasks.length; j++) {
+        for (var j = 0; j < project.tasks.length; j++) {
             var task = project.tasks[j];
             projectElement.innerHTML += "<p><b>" + task.name + "</b></p>";
             projectElement.innerHTML += "<p>" + task.description + "</p>";
+        }
+        if (link) {
+            if (link.startsWith("http")) {
+                projectElement.innerHTML += `<a href='${link}' target='_blank'>Open</a>`;
+            } else {
+                projectElement.innerHTML += `<a href='./projects/${link}'>Read More</a>`;
+            }
         }
         projectSection.appendChild(projectElement);
     }

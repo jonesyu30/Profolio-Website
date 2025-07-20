@@ -32,3 +32,4 @@ function toggleTheme() {
   localStorage.setItem("Theme", currentTheme);
   location.reload();
 }
+document.addEventListener("touchstart", function(e) {e.preventDefault()}, true);

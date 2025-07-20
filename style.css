@@ -72,7 +72,7 @@ body {
 /* Sections */
 section {
     padding: 5rem 2rem;
-    min-height: 100vh;
+    min-height: 100svh;
     padding-top: 4rem;
 }
 /* Hero Section */
@@ -175,22 +175,35 @@ section {
     
     /* Visual Design */
     background: var(--light-color-semi-transparent);
+    border: 1px solid var(--dark-color-semi-transparent);
     border-radius: 10px;
     
     /* Interactive Effects */
     transition: transform 0.3s ease, 
                 background-color 0.3s ease, 
                 box-shadow 0.3s ease;
+
+    position: relative;
 }
 
 /* Project Card Hover Effects */
-.project-card:hover {
+.project-card:hover, .project-card:focus, .project-card:active {
     /* Lift effect */
     transform: translateY(-5px);
     
     /* Enhanced shadow and background */
-    box-shadow: 0 3px 10px var(--dark-color);
+    box-shadow: 3px 3px 0px var(--light-color-semi-transparent), 
+                4px 4px 0px var(--dark-color-semi-transparent);
     background-color: var(--light-color);
+}
+.project-card a{
+    display: block;
+    text-align: right;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .contact-form {
