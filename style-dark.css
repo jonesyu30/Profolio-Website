@@ -5,7 +5,9 @@
     --secondary-color-semi-transparent: rgba(32, 30, 28, 0.8);
     --dark-color: rgb(255, 239, 214);
     --light-color: #201e1c;
-    --dark-color-semi-transparent: rgba(32, 30, 28, 0.8);
+    --light-color-semi-transparent: rgba(32, 30, 28, 0.8);
+    --dark-color-semi-transparent: rgba(255, 239, 214, 0.8);
+    --icon-color: rgb(255, 239, 214, 0.5);
 }
 
 #hero {

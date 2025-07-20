@@ -123,12 +123,15 @@
         <form class="contact-form" onsubmit="handleFormSubmit(event)">
             <div class="form-group">
                 <input id="name-input" type="text" placeholder="Your Name" required>
+                <i id="user-icon" class="fa-regular fa-user"></i>
             </div>
             <div class="form-group">
                 <input id="email-input" type="email" placeholder="Your Email" pattern=".+@[^@]+\.[^@]{2,}$" required>
+                <i id="email-icon" class="fa-regular fa-envelope"></i>
             </div>
             <div class="form-group">
                 <textarea id="message-input" rows="5" placeholder="Your Message" required></textarea>
+                <i id="message-icon" class="fa-regular fa-comment"></i>
             </div>
             <button type="submit">Send Message</button>
         </form>
