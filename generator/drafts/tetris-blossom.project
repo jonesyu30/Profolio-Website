@@ -3,9 +3,22 @@ ENGG1330 Project - A Terminal Tetris Clone
 ../assets/tetris-blossom.png
 
 ##Chapter 0: The Background
+Tetris blossom ❀ is a game made in python. We aren't allow to use any external libraries, except python curses for gui and input handling. 
 
+The problem with this approach is that pygame nor any other easy libraries cannot be used, making the development process harder, but simpler at the same time. Harder as we have to reinvent the libraries for graphics and animations in the terminal; Simpler as we won't have to learn and compare ten thousand different libraries to get the same result. 
 
 ##Chapter 1: Game Design
+With a Google Doc, we document all our game ideas and discuss and compare to get our final answer -- A Tetris Game. With some twists of course: 
+1. We are Blossoms :D, so green, so natural
+2. We have power ups~
+3. We have animations
 
-##Chapter 2: Final product
-Sadly, we only got A, instead of A+. :(. The problem with our game is that it not being innovative enough (according to the syllabus).
+##Chapter 2: Development
+Making the game is not that simple, it is quite a tedious process, especially for a newbie in programming. But with my prior (failed) experiences on creating Game Loops, updating and rendering during each loop, and handling each input. These give me a basic idea on how the structure of the program would be. 
+
+After that, it was just debugging and developing, you think of an algorithm, think of how things would work. Then, you implement it, and it becomes workable, somehow. 
+
+##Chapter 3: Final product
+Sadly, we only got A, instead of A+. :(. The problem with our game is that it not being innovative enough (according to the syllabus). But NGL, A is still a pretty good score, with all other score matrixes having full marks. Just keep it in mind, and don't make the same mistake in future projects. 
+
+* This projects include a trailer video and demo video, however, without the permission from my teamates, I will maintain their privacy. The video will not be placed here in this blog.

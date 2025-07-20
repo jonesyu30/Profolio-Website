@@ -192,10 +192,10 @@ const PROJECT_JSON = [
 
 // Load the data from the JSON file
 async function readJson() {
-    const shuffled = PROJECT_JSON.sort(() => Math.random() - 0.5);
+    // const shuffled = PROJECT_JSON.sort(() => Math.random() - 0.5);
     // const response = await fetch("projects.json");
     // const json = await response.json();
-    return shuffled;
+    return PROJECT_JSON;
 }
 function writeProjects(projects) {
     var projectSection = document.getElementById("projects-grid");
