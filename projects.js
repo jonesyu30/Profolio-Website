@@ -41,7 +41,8 @@ const PROJECT_JSON = [
                 "description": "Obtained grade A in Group Project of ENGG1330 - Computer Programming."
             }
         ],
-        "image": "./assets/images/tetris-blossom.png"
+        "image": "./assets/images/tetris-blossom.png",
+        "link": "tetris-blossom.html"
     },
     {
         "id": 3,
@@ -137,7 +138,7 @@ const PROJECT_JSON = [
             }
         ],
         "image": "https://raw.githubusercontent.com/jonesyu30/MAWL/main/assets/08a69412-dd0d-46e1-aae4-36f4e3088e47.sketchpad-2.png",
-        "link": "https://github.com/jonesyu30/MAWL/blob/main/README.md"
+        "link": "make-art-with-love.html"
     },
     {
         "id": 7,
@@ -161,7 +162,7 @@ const PROJECT_JSON = [
             }
         ],
         "image": "https://ngl-convo.vercel.app/icon.ico",
-        "link": "https://ngl-convo.vercel.app"
+        "link": "ngl-convo.html"
     },
     {
         "id": 8,
@@ -185,17 +186,16 @@ const PROJECT_JSON = [
             }
         ],
         "image": "./assets/images/profolio.jpeg",
-        "link": "https://github.com/jonesyu30"
+        // "link": "https://github.com/jonesyu30"
     }
 ]
 
 // Load the data from the JSON file
 async function readJson() {
-    return PROJECT_JSON;
+    const shuffled = PROJECT_JSON.sort(() => Math.random() - 0.5);
     // const response = await fetch("projects.json");
     // const json = await response.json();
-    // const shuffled = json.sort(() => Math.random() - 0.5);
-    // return shuffled;
+    return shuffled;
 }
 function writeProjects(projects) {
     var projectSection = document.getElementById("projects-grid");

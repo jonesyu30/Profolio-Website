@@ -57,7 +57,7 @@ files.forEach(file => {
 
     
     // write to file
-    const writePath = `./projects/${file.split('.')[0]}.html`;
+    const writePath = `../projects/${file.split('.')[0]}.html`;
     fs.writeFileSync(writePath, result, 'utf-8');
 });
 
