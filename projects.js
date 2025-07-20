@@ -64,7 +64,7 @@ const PROJECT_JSON = [
                 "description": "Recorded and edited a playlist of 4 YouTube videos to showcase the progresses and results."
             }
         ],
-        "image": "./assets/images/automatic-notice-scrapper.png",
+        "image": "https://i.ytimg.com/vi/wzCNy71EyDc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDrUMMDBEA_hHfrK_YkKUPsycOw2A",
         "link": "discord-bot.html"
     },
     {

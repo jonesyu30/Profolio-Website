@@ -6,6 +6,7 @@ console.log(files);
 const titleString = "##TITLE##";
 const descriptionString = "##DESCRIPTION##";
 const contentString = "##CONTENT##";
+const heroImageString = "##HERO_URL##";
 
 files.forEach(file => {
     if(!file.endsWith('.project')) return; // only process .project files
@@ -20,10 +21,11 @@ files.forEach(file => {
         console.error(`Error: ${file} is missing title or description.`);
         return;
     }
+    const heroImageLink = draft[2] || "";
 
     // remove the first two lines
     var content = ""
-    for (let i = 2; i < draft.length; i++) {
+    for (let i = 3; i < draft.length; i++) {
         if(draft[i].trim() === "") continue; // skip empty lines
         if(draft[i].startsWith('##')){
             content += `<h2 class="section-title">${draft[i].substring(2)}</h2>\n`;
@@ -50,6 +52,7 @@ files.forEach(file => {
     result = result.replace(titleString, title)
     result = result.replace(descriptionString, description)
     result = result.replace(contentString, content);
+    result = result.replace(heroImageString, heroImageLink);
 
 
     

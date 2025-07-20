@@ -11,7 +11,6 @@
 }
 
 #hero {
-    background: linear-gradient(135deg, var(--primary-color-semi-transparent), var(--secondary-color-semi-transparent));
     color: var(--dark-color);
     display: flex;
     flex-direction: column;

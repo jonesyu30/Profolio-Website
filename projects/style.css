@@ -47,6 +47,18 @@ a{
     text-decoration: underline;
 }
 
+#hero{
+    position: relative;
+    color: var(--dark-color);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    aspect-ratio: auto;
+    min-height: 100svh;
+}
+
 @media only screen and (max-width: 850px) {
     img {
         max-width: 100%;
@@ -72,5 +84,9 @@ a{
     ol {
         padding-left: 2rem;
         font-size:0.9rem;
+    }
+    #hero {
+        min-height: 40svb;
+        aspect-ratio: auto;
     }
 }
