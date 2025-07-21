@@ -3,10 +3,19 @@ MAWL - A platform to Make Art With LOVE
 https://raw.githubusercontent.com/jonesyu30/MAWL/main/assets/08a69412-dd0d-46e1-aae4-36f4e3088e47.sketchpad-2.png
 
 ##Chapter 0: The Background
-MAWL is fun~~
+So, I want to create something that is multiplayer, as that is what keeps people in playing, with friends. Also, it is basically free promotion. Another factor is that everyone, at least every couples' IG feed are filled with couple stuff. This would be a huge market for a game to gain player.
+
+So here is the plan, a multiplayer game for couples. Thus formed MAWL.
 
 ##Chapter 1: Game Design
-There is no game......
+MAWL stands for Make Art With Love, basically, it is a platform for friends to draw and make art togather. To minmize the hosting requirement, I wont be creating a server myself. Instead, I'll be making a p2p connection with peer.js and use their default server for connecting. 
+
+After joining the same room, user can draw... And that's it for now. 
 
 ##Chapter 2: Final product
 Try out on <a target="_blank" href="https://jonesyu30.github.io/MAWL/">here</a>!!!
+
+##Chapter 3: Future of project
+Although there is like no content so far, at least we pondered the possibility of p2p connections in browser. If we would like to create games with this technology, we have the tools to do so. However, any game development would make the project a lot more complicated. 
+
+After adding more content, we will be promoting it in instagram as initially planned. And try to get as much player as possible, or even start a new trend. 
