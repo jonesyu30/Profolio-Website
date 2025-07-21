@@ -187,6 +187,30 @@ const PROJECT_JSON = [
         ],
         "image": "./assets/images/profolio.jpeg",
         // "link": "https://github.com/jonesyu30"
+    },
+    {
+        "id": 9,
+        "name": "Discord Webhook - A Discord Bot for Archery",
+        "language": "Next.js/TypeScript",
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Webhook Integration",
+                "description": "Developed a Discord bot that integrates with Discord webhooks to send updates and notifications to a Discord channel."
+            },
+            {
+                "id": 2,
+                "name": "Github Actions",
+                "description": "Implemented GitHub Actions for cron jobs to automate the process of sending updates to Discord, ensuring timely and consistent communication."
+            },
+            {
+                "id": 3,
+                "name": "Github Gist",
+                "description": "Uses github gist as backend data storage, to ensure the notifications will not duplicate."
+            }
+        ],
+        "image": "https://cdn2.picryl.com/photo/2018/11/13/arrows-are-shot-into-the-targets-during-the-archery-c62826-1024.jpg",
+        // "link": "https://github.com/jonesyu30"
     }
 ]
 

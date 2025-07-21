@@ -95,7 +95,10 @@ iframe{
     #hero {
         min-height: 40svh;
         aspect-ratio: auto;
-        padding-top: 60px; /* Adjust for smaller navbar on mobile */
+        padding-top: 48+39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -104,5 +107,7 @@ iframe{
 }
 .chapters-divider{
     border: 1px solid var(--icon-color);
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
