@@ -34,26 +34,35 @@
 
     <section id="paragraphs">
         <div class="chapters">
-            <h2 class="section-title">Chapter 0: The Background</h2>
+            <h2 class="section-title">Table of Contents</h2>
+<ol><li class="toc-list"><a href="#chapter-0:-the-background" class="toc-link">Chapter 0: The Background</a></li><li class="toc-list"><a href="#chapter-1:-discord-bot" class="toc-link">Chapter 1: Discord Bot</a></li><li class="toc-list"><a href="#chapter-2:-initial-plan" class="toc-link">Chapter 2: Initial plan</a></li><li class="toc-list"><a href="#chapter-3:-the-video" class="toc-link">Chapter 3: The Video</a></li><li class="toc-list"><a href="#chapter-4:-the-peak" class="toc-link">Chapter 4: The Peak</a></li><li class="toc-list"><a href="#chapter-5:-the-downfall" class="toc-link">Chapter 5: The Downfall</a></li></ol>
+<hr class="chapters-divider" id="chapter-0:-the-background">
+<h2 class="section-title">Chapter 0: The Background</h2>
 <p>This is one of my first "huge" projects. Why do I say that? Although there are less than 10 files in the entire codebase, and there are only a few functions, my target audience is the public scouts, which stresses me out. Also, I got stuck in a lot of hurdles with many dead ends, slowly making my interest fades away. </p>
 <p>Although I didn't do much coding, I did a lot of other things, including:</p>
-<ol type="1"><li>Creating YouTube Videos every week for progress update</li><li>Getting feedback from various channels</li><li>Fixing potential bugs</li><li>Searching for a reliable server hosting method</li><li>Studying if the automation violates any Terms of Services or ethical concerns</li><li>Investigating potential markets</li></ol><p>I would like to talk about them in details, it was a fun journey.</p>
+<ol>
+<li>Creating YouTube Videos every week for progress update</li><li>Getting feedback from various channels</li><li>Fixing potential bugs</li><li>Searching for a reliable server hosting method</li><li>Studying if the automation violates any Terms of Services or ethical concerns</li><li>Investigating potential markets</li></ol><p>I would like to talk about them in details, it was a fun journey.</p>
+<hr class="chapters-divider" id="chapter-1:-discord-bot">
 <h2 class="section-title">Chapter 1: Discord Bot</h2>
 <p>So ever since I was using Discord, I am thinking of creating a Discord bot. Previously, when I was enjoying a game named Hypixel Skyblock, people would create a custom bot for their server to notify people for important events. This makes the entire process feel professional. Thus, I tried creating my own bot. In that time, I know little about programming, and I just follow whatever the YouTube tutorials said and make my alterations in the positions that I understand. If I remember correctly, I believe that it was made in Java. However, it was abandoned as I stopped playing the game and stopped using discord. </p>
 <p>A few years later, I started to use Discord with another friend group and I noticed that a new unofficial Scout Discord group was created and inviting scouts to join. Being a scout myself, I joined the server and took a look around. The server is pretty active with a few people chilling around every night. I never joined that chat, but one feature inspired me - the notice notifications feature. Whenever there is a new notice from the scout organization, people share it onto a dedicated Discord channel to let more people join different events. And I think to myself, I know programming, I know Discord, I can automate the process.  </p>
 <p>Thus, the project begins.</p>
+<hr class="chapters-divider" id="chapter-2:-initial-plan">
 <h2 class="section-title">Chapter 2: Initial plan</h2>
 <p>The first plan is to speed run the creation of a working Discord bot. I chose JavaScript over Java, as I gained experience on Node.js over the years. I simply followed some tutorials and quickly got the bot online. </p>
 <p>Next, I have to know how to automatically get the notice from their website. My plan is to look through their HTML and JavaScript and see if they are using some kind of backend API where I can use myself. However, after searching for a long time, I gave up. Instead, I fetched the entire webpage HTML, parsed it, and extracted the information that I need. This method will work as long as the web design remains unchanged, but as long as 1 of the elements are altered, my bot might break.</p>
 <p>Afterwards, I have to save it somewhere. Initially, I used a JSON file as my database to store all the fetched notices, which works well with text. </p>
 <p>So my idea is that: the database will be storing all the files that I have sent. So when I scrap the text again, I know which I have sent and which I haven't. (Now that I think about it, I could probably use some kind of hashing method so that I won't be storing anything that does not belongs to me) And I can send only those that I haven't sent before, to prevent duplicate sending. </p>
 <p>With some parsing and merging with the Discord.js api, the first version of the product is born.</p>
+<hr class="chapters-divider" id="chapter-3:-the-video">
 <h2 class="section-title">Chapter 3: The Video</h2>
 <p>To celebrate my first success, and to tell people about the new tool, I created a video showcasing the production process and the final result. I included the process so that others knows what they are using, and understand its reliability, so that I gets less stressful when something wrong happens.  </p>
 <p>Anyways, the video took like 4 days to finish, from scripting to taking footage and editing. The quality isn't great, especially the sound quality, I think my editing, trying to make the base stronger, made it worse than the original. But it got some attention, and the ending is great, which greatly enhanced the video feeling. </p>
 <p>Some people even shared it in the unofficial Discord Group, and I got contacted by one of the Scout group Instagram account owner to ask if I would like to share it to the world. I declined it as it wasn't a complete project yet. But now, I regret it. If I got the chance again, I would definitely accept the offer. Worst case scenario, the Discord bot breaks/gets hacked and every server got spammed with random messages. But I can fix whatever happened, and would get fame from this, maybe some leaders would notice my skills and ask me to integrate the real API. OMG that would be cool, but now, I missed the chance. Lesson learnt, there are chances everywhere, only if you are prepared. (in my language: 機會係留俾啲有機會嘅人)</p>
+<hr class="chapters-divider" id="chapter-4:-the-peak">
 <h2 class="section-title">Chapter 4: The Peak</h2>
 <p>I would say I peaked in the first video, riding the hype, I tried to create more content and make more features for my app. In the next 3 weeks, I tried to create new features every week and post a video about it. I made it to week 4, with topics including database, Scheduling, and even putting AI in the title. It was great while it last. </p>
+<hr class="chapters-divider" id="chapter-5:-the-downfall">
 <h2 class="section-title">Chapter 5: The Downfall</h2>
 <p>The features aren't useful, instead should have focused in polishing and ensuring consistency. I have tried but the problems are just too complex. </p>
 

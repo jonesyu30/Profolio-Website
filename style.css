@@ -85,6 +85,8 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
 }
 
 #hero::before {

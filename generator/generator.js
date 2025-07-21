@@ -25,14 +25,18 @@ files.forEach(file => {
 
     // remove the first two lines
     var content = ""
+    var chapters = [];
     for (let i = 3; i < draft.length; i++) {
         if(draft[i].trim() === "") continue; // skip empty lines
         if(draft[i].startsWith('##')){
-            content += `<h2 class="section-title">${draft[i].substring(2)}</h2>\n`;
+            const chapterTitle = draft[i].substring(2).trim();
+            const chapterId = chapterTitle.toLowerCase().replace(/ /g, '-');
+            content += `<hr class="chapters-divider" id="${chapterId}">\n<h2 class="section-title">${chapterTitle}</h2>\n`;
+            chapters.push(chapterTitle);
             continue;
         }
         if(draft[i].startsWith('1. ')) {
-            content += '<ol type="1">';
+            content += '<ol>\n';
             while(draft[i].match(/^\d. /)) {
                 content += `<li>${draft[i].substring(3)}</li>`;
                 i++;
@@ -46,6 +50,14 @@ files.forEach(file => {
         console.error(`Error: ${file} has no content.`);
         return;
     }
+
+    // add table of contents
+    var toc = '<h2 class="section-title">Table of Contents</h2>\n<ol>';
+    chapters.forEach((chapter, index) => {
+        toc += `<li class="toc-list"><a href="#${chapter.toLowerCase().replace(/ /g, '-')}" class="toc-link">${chapter}</a></li>`;
+    });
+    toc += '</ol>\n';
+    content = toc + content;
 
     // edit the template
     var result = template;

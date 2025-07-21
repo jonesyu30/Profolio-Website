@@ -92,7 +92,16 @@ iframe{
         font-size:0.9rem;
     }
     #hero {
-        min-height: 40svb;
+        min-height: 40svh;
         aspect-ratio: auto;
+        padding-top: 60px; /* Adjust for smaller navbar on mobile */
     }
+}
+
+.toc-list{
+    list-style-type: initial;
+}
+.chapters-divider{
+    border: 1px solid var(--secondary-color);
+    margin: 2rem 0;
 }
