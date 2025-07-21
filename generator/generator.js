@@ -28,6 +28,7 @@ files.forEach(file => {
     var chapters = [];
     for (let i = 3; i < draft.length; i++) {
         if(draft[i].trim() === "") continue; // skip empty lines
+        if(draft[i].startsWith('//')) continue; // skip lines starting with //
         if(draft[i].startsWith('##')){
             const chapterTitle = draft[i].substring(2).trim();
             const chapterId = chapterTitle.toLowerCase().replace(/ /g, '-');
