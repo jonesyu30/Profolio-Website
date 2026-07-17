@@ -1,0 +1,24 @@
+---
+layout: layouts/post.html
+title: "NGL CONVO"
+description: "Instagram Trend - Annonomous texting"
+heroImage: "https://ngl-convo.vercel.app/_next/image?url=%2FNGL%20CONVO.png&w=256&q=75"
+tags: posts
+---
+
+
+## Chapter 0: The Background
+
+So there was a hot trend about NGL on Instagram. People can interact with other without being cringe, or leaving their name. This gives people more chance to talk about something more personal. However, most conversation in NGL just ends after 1 question and 1 answer.
+
+
+## Chapter 1: Game Design
+
+With the newly invented system, user can keep a conversation going FOREVER! Within the same topic, people can put comments on comments, replies over replies. Basically creating an infinite chat room for everyone to ask anything.
+
+This allows for infinite replaibility for people. Thus hooking people in for more than 24 hours(the length of 1 story).
+
+
+## Chapter 2: Final product
+
+You can try sending annonomous message to me <a target="_blank" href="https://ngl-convo.vercel.app">here</a>!!!

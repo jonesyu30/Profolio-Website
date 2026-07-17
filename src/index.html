@@ -1,0 +1,70 @@
+---
+layout: layouts/base.html
+title: "Yu Chung Yau - Jones Portfolio"
+---
+
+<!-- Hero Section -->
+<section id="hero">
+    <h5>Jones</h5>
+    <h1>Yu Chung Yau</h1>
+    <p>Third-year student in <b>Computer Science</b></p>
+</section>
+
+<!-- Projects Section (Compiled Dynamically) -->
+<section id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+        {% for post in collections.posts %}
+            <a class="project-card" href="{{ post.url }}" style="--i:{{ forloop.index0 }};">
+              <div class="card-content">
+                  {% if post.data.heroImage %}
+                      <img src="{{ post.data.heroImage }}" alt="Icon" class="card-fg-img" />
+                  {% endif %}
+                  <div class="card-text">
+                    <h3>{{ post.data.title }}</h3>
+                    <p class="card-description">{{ post.data.description }}</p>
+                    <p class="read-more">Read More</p>
+                  </div>
+              </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Hobbies Section -->
+<section id="hobbies">
+    <h2 class="section-title">My Hobbies</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Archery</h3>
+            <p>Competitive & Relax</p>
+        </div>
+        <div class="project-card">
+            <h3>Handball</h3>
+            <p>Competitive & Intense</p>
+        </div>
+        <div class="project-card">
+            <h3>Scout</h3>
+            <p>Stressful but rewarding</p>
+        </div>
+        <div class="project-card">
+            <h3>Books</h3>
+            <p>Chill & Interesting</p>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>The University of Hong Kong</h3>
+            <p>2024-2028</p>
+        </div>
+        <div class="project-card">
+            <h3>St. Paul's College</h3>
+            <p>2018-2024</p>
+        </div>
+    </div>
+</section>

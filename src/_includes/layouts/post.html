@@ -1,0 +1,65 @@
+---
+layout: layouts/base.html
+---
+
+<section id="hero" style="--hero-url: url('{{ heroImage }}');">
+    <div class="hero-content">
+        <h5>Jones</h5>
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+    </div>
+</section>
+
+<section id="paragraphs">
+    <div class="chapters">
+        
+        <div class="table-of-contents">
+            <h2 class="section-title">Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+
+        <div class="markdown-body">
+            {{ content }}
+        </div>
+        
+        <footer>
+            <span>Yu Chung Yau @ {% if date %}{{ date | date: "%d/%m/%Y" }}{% else %}25/05/2025{% endif %}</span>
+            <div class="footer-nav">
+                <a href="/" class="back-home-link">Back to Home</a>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<!-- Client Script to generate Table of Contents dynamically from rendered headers -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const tocList = document.getElementById("toc-list");
+    const headers = document.querySelectorAll(".markdown-body h2");
+    
+    if (headers.length === 0) {
+        document.querySelector(".table-of-contents").style.display = "none";
+        return;
+    }
+
+    headers.forEach(header => {
+        // Create a URL-friendly ID from the header text
+        const id = header.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        header.id = id;
+        
+        // Append section divider line styling right above the heading
+        const divider = document.createElement("hr");
+        divider.className = "chapters-divider";
+        divider.style.margin = "3rem 0 1.5rem 0";
+        divider.style.border = "none";
+        divider.style.borderTop = "1px solid var(--dark-color-semi-transparent)";
+        header.parentNode.insertBefore(divider, header);
+
+        // Append item to Table of Contents
+        const li = document.createElement("li");
+        li.className = "toc-list";
+        li.innerHTML = `<a href="#${id}" class="toc-link">${header.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+});
+</script>

@@ -1,0 +1,24 @@
+{
+  "name": "profol",
+  "version": "1.0.0",
+  "main": "contact-me.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonesyu30/Profolio-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonesyu30/Profolio-Website/issues"
+  },
+  "homepage": "https://github.com/jonesyu30/Profolio-Website#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

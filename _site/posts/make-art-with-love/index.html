@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFFDF7">
+    <title>Make Art With Love</title>
+    
+    <!-- Link to our Eleventy static assets paths -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/contact-me.js" defer></script>
+
+    <link rel="icon" href="/assets/images/profolio.jpeg" type="image/jpeg">
+
+    <!-- SEO Meta Tags -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yu Chung Yau",
+        "url": "https://jonesyu30.github.io/Profolio-Website",
+        "sameAs": [
+            "https://github.com/jonesyu30",
+            "https://www.instagram.com/jung1yau6/"
+        ],
+        "jobTitle": "Computer Science Student",
+        "affiliation": "The University of Hong Kong"
+        }
+    </script>
+    <meta name="description" content="Yu Chung Yau - Jones, a Computer Science student showcasing projects, hobbies, education, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+<section id="hero" style="--hero-url: url('https://raw.githubusercontent.com/jonesyu30/MAWL/main/assets/08a69412-dd0d-46e1-aae4-36f4e3088e47.sketchpad-2.png');">
+    <div class="hero-content">
+        <h5>Jones</h5>
+        <h1>Make Art With Love</h1>
+        <p>MAWL - A platform to Make Art With LOVE</p>
+    </div>
+</section>
+
+<section id="paragraphs">
+    <div class="chapters">
+        
+        <div class="table-of-contents">
+            <h2 class="section-title">Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+
+        <div class="markdown-body">
+            <h2>Chapter 0: The Background</h2>
+<p>So, I want to create something that is multiplayer, as that is what keeps people in playing, with friends. Also, it is basically free promotion. Another factor is that everyone, at least every couples' IG feed are filled with couple stuff. This would be a huge market for a game to gain player.</p>
+<p>So here is the plan, a multiplayer game for couples. Thus formed MAWL.</p>
+<h2>Chapter 1: Game Design</h2>
+<p>MAWL stands for Make Art With Love, basically, it is a platform for friends to draw and make art togather. To minmize the hosting requirement, I wont be creating a server myself. Instead, I'll be making a p2p connection with peer.js and use their default server for connecting.</p>
+<p>After joining the same room, user can draw... And that's it for now.</p>
+<h2>Chapter 2: Final product</h2>
+<p>Try out on <a target="_blank" href="https://jonesyu30.github.io/MAWL/">here</a>!!!</p>
+<h2>Chapter 3: Future of project</h2>
+<p>Although there is like no content so far, at least we pondered the possibility of p2p connections in browser. If we would like to create games with this technology, we have the tools to do so. However, any game development would make the project a lot more complicated.</p>
+<p>After adding more content, we will be promoting it in instagram as initially planned. And try to get as much player as possible, or even start a new trend.</p>
+
+        </div>
+        
+        <footer>
+            <span>Yu Chung Yau @ 25/05/2025</span>
+            <div class="footer-nav">
+                <a href="/" class="back-home-link">Back to Home</a>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<!-- Client Script to generate Table of Contents dynamically from rendered headers -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const tocList = document.getElementById("toc-list");
+    const headers = document.querySelectorAll(".markdown-body h2");
+    
+    if (headers.length === 0) {
+        document.querySelector(".table-of-contents").style.display = "none";
+        return;
+    }
+
+    headers.forEach(header => {
+        // Create a URL-friendly ID from the header text
+        const id = header.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        header.id = id;
+        
+        // Append section divider line styling right above the heading
+        const divider = document.createElement("hr");
+        divider.className = "chapters-divider";
+        divider.style.margin = "3rem 0 1.5rem 0";
+        divider.style.border = "none";
+        divider.style.borderTop = "1px solid var(--dark-color-semi-transparent)";
+        header.parentNode.insertBefore(divider, header);
+
+        // Append item to Table of Contents
+        const li = document.createElement("li");
+        li.className = "toc-list";
+        li.innerHTML = `<a href="#${id}" class="toc-link">${header.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+});
+</script>
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <input id="name-input" type="text" placeholder="Your Name" required>
+                <i id="user-icon" class="fa-regular fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input id="email-input" type="email" placeholder="Your Email" pattern=".+@[^@]+\.[^@]{2,}$" required>
+                <i id="email-icon" class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <textarea id="message-input" rows="5" placeholder="Your Message" required></textarea>
+                <i id="message-icon" class="fa-regular fa-comment"></i>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/jonesyu30" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/jung1yau6/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/60303742" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+</body>
+</html>

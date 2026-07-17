@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Image Postprocessing</title>
+    
+    <!-- Link to our Eleventy static assets paths -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/contact-me.js" defer></script>
+
+    <link rel="icon" href="/assets/images/profolio.jpeg" type="image/jpeg">
+
+    <!-- SEO Meta Tags -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yu Chung Yau",
+        "url": "https://jonesyu30.github.io/Profolio-Website",
+        "sameAs": [
+            "https://github.com/jonesyu30",
+            "https://www.instagram.com/jung1yau6/"
+        ],
+        "jobTitle": "Computer Science Student",
+        "affiliation": "The University of Hong Kong"
+        }
+    </script>
+    <meta name="description" content="Yu Chung Yau - Jones, a Computer Science student showcasing projects, hobbies, education, and contact information.">
+    
+    <style>
+        /* Opt-in to native cross-document transitions */
+        @media (prefers-reduced-motion: no-preference) {
+            @view-transition {
+                navigation: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div id="background"></div>
+    <script src="/assets/js/sphere.js" defer></script>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/#hero">Home</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#hobbies">Hobbies</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content gets injected here -->
+    
+<!-- Hero Section with Custom Page Background -->
+<section id="hero" style="background-image: linear-gradient(135deg, var(--primary-color-semi-transparent), var(--secondary-color-semi-transparent)), url('/assets/images/java-image-postprocessing.png'); background-size: cover; background-position: center; position: relative;">
+    <div class="hero-content" style="text-align: center; color: var(--light-color); z-index: 2;">
+        <h4>Yu Chung Yau</h4>
+        <!-- Transition Name matches the post's unique slug -->
+        <h1 style="view-transition-name: title-java-image-postprocessing;">Java Image Postprocessing</h1>
+        <p>Box Filter - Evolution Algorithm</p>
+    </div>
+</section>
+
+<!-- Main Article Content Section -->
+<section id="paragraphs" style="padding-top: 2rem;">
+    <div class="chapters" style="max-width: 800px; margin: 0 auto; background: var(--light-color-semi-transparent); padding: 2rem; border-radius: 10px; border: 1px solid var(--dark-color-semi-transparent);">
+        
+        <!-- Table of Contents (Generated dynamically on the client-side for clean markdown output) -->
+        <div class="table-of-contents" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--dark-color-semi-transparent);">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Table of Contents</h2>
+            <ol id="toc-list" style="padding-left: 20px; line-height: 2;"></ol>
+        </div>
+
+        <!-- Rendered Markdown Body -->
+        <div class="markdown-body">
+            <h2>Chapter 0: The Background</h2>
+<p>The thing I like about JAVA, is it's cross-platform availibility. I can wirte the program in one platform, without worrying the difference when running in other OS. As long as the user has Java installed, the program will run. Especially when it comes to GUI, the low level code controlling input and output system is always different across OS.</p>
+<p>Java Swing is currently my second favoirite GUI library, after HTML canvas. It is easy to use and allows me to create windows, with components like buttons, text fields, and labels, without needing to install additional libraries (I hate installing libraries, but I might try them in the future).</p>
+<p>When I was trying things out in Java Swing, I found out that it is possible to create window with images with pixel manipulation methods. This is not the first time I have tried pixel manipulation, I have done it in HTML canvas before, which gives me an excellent result, I even used the result as my profile picture for a while (I am getting a little bit off topic). Anyways, I would like to make another piece of art, using Java Swing.</p>
+<h2>Chapter 1: The idea</h2>
+<p>The idea of Evolution Algorithm comes from all of the videos I watched on Youtube about evolution simulation. Specificly, <a target="_blank" href="https://youtu.be/6aXx6RA1IK4?si=8tqKr0RGsCa9GPky">this one</a> by Spu7Nix stands out and directly sparked me to start my project. After watching the video, I found that the animation showing each generation of the evolution is very satisfying. Each generation adding a new piece of object to the scene, slowly approaching the input image, while the final result gradually emerges. I like how the final result is not a perfect match of the input image, but with a little bit of randomness. Even with randomness, it still keeps the main features of the input image, just like how a filter works.</p>
+<p>Here is the idea of the algorithm:</p>
+<ol>
+<li>Generate a set of rectangles with random attributes (width, height, position, color)</li>
+<li>Compare each rectangle with the input image, and calculate the difference between the two images.</li>
+<li>Select the first half with the least difference, and kill the rest.</li>
+<li>For each of the remaining rectangles, generate a variance which is similar to the original rectangle, but with a slight difference.</li>
+<li>Repeat step 2 to 4 until the difference is small, or the maximum number of generations is reached.</li>
+<li>Go to step 1 and repeat the process, until a certain number of generations is reached.
+Even with the algorithm in mind, the implementation is not as simple as I thought.</li>
+</ol>
+<h2>Chapter 2: The Code</h2>
+<p>With multiple &quot;failed&quot; attempts using the Java GUI library in the past, I have gained some experience on how it works. I am starting to understand how people extends the JPanel/JFrame class to create a custom panel. This allows me to add buttons directly in the constructor of the class, as well as ActionListeners to handle the button clicks.</p>
+<p>I made 1 extension of JFrame, which is the main window of the program, and 1 extension of JPanel, which is the panel that will be filled with images in the ImageScrollable class. So that I can see all the images by scrolling.</p>
+<p>Then to the core part of the program, the Core classes. There are three files: Core.java, RandomShape.java, and GenImage.java.</p>
+<img src="/assets/images/java-image-postprocessing.png" alt="Java Image Postprocessing" class="">
+<h2>Chapter 3: Additional features</h2>
+<p>To slightly enhance the user experience, I added the ability to choose input image from the Java Swing file chooser. Also, I added the feature to output the generation animation as a video file, so that the user can enjoy the process afterwards. Lastly, I added a timer to show the time taken for each generation, this allows me and the user to estimate the time needed for the whole process, and adjust the configuration accordingly.</p>
+<h2>Chapter 4: Conclusion</h2>
+<p>I have uploaded the source code to my GitHub repository, you can find it <a target="_blank" href="https://github.com/jonesyu30/Image-Evolution">here</a>. The code is not well documented, and I will leave it as it is for now. It is a personal project to learn Java programming, and I am not planning to make it a production-ready application. However, I am open to suggestions and improvements, so feel free to reach out if you have any ideas or feedback.</p>
+
+        </div>
+        
+        <!-- Article Footer -->
+        <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--dark-color-semi-transparent); font-size: 0.9rem; color: var(--dark-color-semi-transparent); display: flex; justify-content: space-between; align-items: center;">
+            <span>Yu Chung Yau @ 25/05/2025</span>
+            <div class="footer-nav">
+                <a href="/" class="back-home-link" style="color: var(--primary-color); text-decoration: underline;">Back to Home</a>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<!-- Client Script to generate Table of Contents dynamically from rendered headers -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const tocList = document.getElementById("toc-list");
+    const headers = document.querySelectorAll(".markdown-body h2");
+    
+    if (headers.length === 0) {
+        document.querySelector(".table-of-contents").style.display = "none";
+        return;
+    }
+
+    headers.forEach(header => {
+        // Create a URL-friendly ID from the header text
+        const id = header.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        header.id = id;
+        
+        // Append section divider line styling right above the heading
+        const divider = document.createElement("hr");
+        divider.className = "chapters-divider";
+        divider.style.margin = "3rem 0 1.5rem 0";
+        divider.style.border = "none";
+        divider.style.borderTop = "1px solid var(--dark-color-semi-transparent)";
+        header.parentNode.insertBefore(divider, header);
+
+        // Append item to Table of Contents
+        const li = document.createElement("li");
+        li.className = "toc-list";
+        li.innerHTML = `<a href="#${id}" class="toc-link" style="color: var(--primary-color); text-decoration: none;">${header.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+});
+</script>
+
+    <!-- Contact Section (Sits on bottom of home page, can be styled globally) -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <input id="name-input" type="text" placeholder="Your Name" required>
+                <i id="user-icon" class="fa-regular fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input id="email-input" type="email" placeholder="Your Email" pattern=".+@[^@]+\.[^@]{2,}$" required>
+                <i id="email-icon" class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <textarea id="message-input" rows="5" placeholder="Your Message" required></textarea>
+                <i id="message-icon" class="fa-regular fa-comment"></i>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/jonesyu30" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/jung1yau6/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/60303742" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <!-- Light/Dark Mode Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <i class="fa-solid fa-sun"></i> / <i class="fa-solid fa-moon"></i>
+    </button>
+</body>
+</html>

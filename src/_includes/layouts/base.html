@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFFDF7">
+    <title>{{ title | default: "Yu Chung Yau - Jones" }}</title>
+    
+    <!-- Link to our Eleventy static assets paths -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/contact-me.js" defer></script>
+
+    <link rel="icon" href="/assets/images/profolio.jpeg" type="image/jpeg">
+
+    <!-- SEO Meta Tags -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yu Chung Yau",
+        "url": "https://jonesyu30.github.io/Profolio-Website",
+        "sameAs": [
+            "https://github.com/jonesyu30",
+            "https://www.instagram.com/jung1yau6/"
+        ],
+        "jobTitle": "Computer Science Student",
+        "affiliation": "The University of Hong Kong"
+        }
+    </script>
+    <meta name="description" content="Yu Chung Yau - Jones, a Computer Science student showcasing projects, hobbies, education, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {{ content }}
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <input id="name-input" type="text" placeholder="Your Name" required>
+                <i id="user-icon" class="fa-regular fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input id="email-input" type="email" placeholder="Your Email" pattern=".+@[^@]+\.[^@]{2,}$" required>
+                <i id="email-icon" class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <textarea id="message-input" rows="5" placeholder="Your Message" required></textarea>
+                <i id="message-icon" class="fa-regular fa-comment"></i>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/jonesyu30" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/jung1yau6/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/60303742" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+</body>
+</html>
