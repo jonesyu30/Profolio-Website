@@ -3,9 +3,6 @@ layout: layouts/base.html
 ---
 
 <section id="hero">
-    <button>
-        <a href="/#projects" class="back-home-link">Back to Home</a>
-    </button>
     <div class="hero-content">
         <img src="{{ heroImage }}" 
                 alt="Hero Image" 
@@ -31,7 +28,7 @@ layout: layouts/base.html
         <footer>
             <span>Yu Chung Yau @ {% if date %}{{ date | date: "%d/%m/%Y" }}{% else %}25/05/2025{% endif %}</span>
             <div class="footer-nav">
-                <a href="/" class="back-home-link">Back to Home</a>
+                <a href="/#projects" class="back-home-link">View More Projects</a>
             </div>
         </footer>
     </div>
