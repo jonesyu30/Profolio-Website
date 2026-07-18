@@ -2,8 +2,14 @@
 layout: layouts/base.html
 ---
 
-<section id="hero" style="--hero-url: url('{{ heroImage }}');">
+<section id="hero">
+    <button>
+        <a href="/#projects" class="back-home-link">Back to Home</a>
+    </button>
     <div class="hero-content">
+        <img src="{{ heroImage }}" 
+                alt="Hero Image" 
+                class="hero-image" />
         <h5>Jones</h5>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>

@@ -18,7 +18,9 @@ title: "Yu Chung Yau - Jones Portfolio"
             <a class="project-card" href="{{ post.url }}" style="--i:{{ forloop.index0 }};">
               <div class="card-content">
                   {% if post.data.heroImage %}
-                      <img src="{{ post.data.heroImage }}" alt="Icon" class="card-fg-img" />
+                    <img src="{{ post.data.heroImage }}" 
+                      alt="Icon"
+                      class="card-fg-img" />
                   {% endif %}
                   <div class="card-text">
                     <h3>{{ post.data.title }}</h3>
