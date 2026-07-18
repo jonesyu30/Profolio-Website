@@ -117,6 +117,7 @@ section {
         animation-delay: calc(var(--i) * 0.15s);
         --start-y: 90px;
         opacity: 0;
+        
 
         .card-content {
             height: 100%;
@@ -150,8 +151,11 @@ section {
 
             .card-fg-img {
                 max-width: 30%;
+                height: 100%;
+                align-self: center;
                 object-fit: contain;
                 aspect-ratio: 16/9;
+                background-color: var(--background-color);
             }
         }
     }
@@ -314,10 +318,11 @@ section {
     }
 
     img,
-    iframe {
+    iframe,video{
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
+        margin: 1rem 0;
     }
 
     @media (max-width: 768px) {
