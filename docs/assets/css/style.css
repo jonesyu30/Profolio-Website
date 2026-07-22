@@ -219,62 +219,8 @@ section {
 }
 
 #contact {
-    min-height: 80vh;
-
-    form {
-        width: 35%;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-
-        .form-group {
-            width: 100%;
-            position: relative;
-
-            input,
-            textarea {
-                z-index: 1;
-                width: 100%;
-                padding: 0.5rem 1rem 0.5rem 2.2rem;
-                margin-bottom: 1rem;
-                box-sizing: border-box;
-                overflow-x: hidden;
-            }
-
-            textarea {
-                resize: vertical;
-                min-height: 100px;
-                max-height: 300px;
-            }
-
-            i {
-                z-index: 2;
-                color: var(--text-color);
-                position: absolute;
-                left: 0.75rem;
-                top: 0.5rem;
-                pointer-events: none;
-            }
-        }
-
-        button[type="submit"] {
-            display: block;
-            margin: 1rem auto;
-            width: 50%;
-            padding: 0.75rem 0.75rem;
-            color: var(--background-color);
-            background-color: var(--text-color);
-            border-radius: 8px;
-            cursor: pointer;
-        }
-    }
-
-    @media (max-width: 768px) {
-        form {
-            width: 90%;
-        }
-    }
-
+    min-height:auto;
+    margin-bottom: 2rem;
     .social-links {
         display: flex;
         justify-content: center;

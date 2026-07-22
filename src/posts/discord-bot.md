@@ -3,6 +3,7 @@ layout: layouts/post.html
 title: "Discord Notice Bot Project"
 description: "Automatic Web Scrapping"
 heroImage: "https://img.youtube.com/vi/wzCNy71EyDc/maxresdefault.jpg"
+date: 2026-07-18
 tags: posts
 ---
 
