@@ -59,7 +59,7 @@ body {
     }
 
     h1 {
-        font-family: 'Story Script', sans-serif;
+        font-family: 'Story Script', "Noto Serif HK", sans-serif;
         color: var(--text-color);
         animation-delay: 0.1s;
         --start-y: 30px;
@@ -111,6 +111,15 @@ section {
 
         @media (max-width: 768px) {
             width: 90%;
+        }
+    }
+    .project-card-wrapper {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
         }
     }
 
@@ -393,7 +402,6 @@ section {
 
     .shelf-plank {
         height: 12px;
-        background: #3d2b1f;
         /* Soft dark wood tone */
         border-radius: 2px;
         box-shadow:
@@ -407,8 +415,8 @@ section {
         margin-top: 20px;
         padding: 16px 20px;
         border: 1px solid rgba(128, 128, 128, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 6px;
-        background: var(--bg-color, #fff);
         transition: opacity 0.25s ease, transform 0.25s ease;
 
         &.hidden {
