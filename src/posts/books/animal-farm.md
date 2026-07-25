@@ -4,6 +4,8 @@ title: "Animal Farm"
 author: "George Orwell"
 heroImage: "https://buybookbook.com/cdn/shop/files/619GyNyTTKL._SL1500.jpg?v=1763352819&width=900"
 tags: ["books"]
+spineColor: '#fffef1'
+textColor: '#22211f'
 ---
 
 # Animal Farm: Simple Gaslighting and the Power of a Sharp Ending

@@ -4,6 +4,8 @@ title: "The Martian"
 author: "Andy Weir"
 heroImage: "https://covers.openlibrary.org/b/isbn/9780804139021-L.jpg"
 tags: ["books"]
+spineColor: '#cb380d'
+textColor: '#d9bb9f'
 ---
 
 I finished *The Martian* on 23 July 2026. 

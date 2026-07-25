@@ -4,6 +4,8 @@ title: "Show Your Work!"
 author: "Austin Kleon"
 heroImage: "https://covers.openlibrary.org/b/isbn/9780761178972-L.jpg"
 tags: ["books"]
+spineColor: '#ffd108'
+textColor: '#050200'
 ---
 
 I finished Austin Kleon’s *Show Your Work!* on 15 July 2026.

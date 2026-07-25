@@ -3,6 +3,8 @@ layout: layouts/post.html
 title: "A Short Stay in Hell"
 author: "Steven L. Peck"
 heroImage: "https://covers.openlibrary.org/b/isbn/9780983748441-L.jpg"
+spineColor: '#f2f0d7'
+textColor: '#b86344'
 tags: ["books"]
 ---
 

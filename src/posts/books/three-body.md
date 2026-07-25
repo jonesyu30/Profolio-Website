@@ -4,6 +4,8 @@ title: "三體"
 author: "劉慈欣"
 heroImage: "https://covers.openlibrary.org/b/isbn/986120606X-L.jpg"
 tags: ["books"]
+spineColor: '#080f15'
+textColor: '#fdfffc'
 ---
 
 I finally finished *The Three-Body Problem* (Book 1). 

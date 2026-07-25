@@ -4,6 +4,8 @@ title: "Why Fish Don't Exist"
 author: "Lulu Miller"
 heroImage: "https://covers.openlibrary.org/b/isbn/9781501160271-L.jpg"
 tags: ["books"]
+spineColor: '#024369'
+textColor: '#cac784'
 ---
 
 I finished *Why Fish Don't Exist* on 8 July 2026.
