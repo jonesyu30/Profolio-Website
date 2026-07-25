@@ -397,6 +397,8 @@ section {
 
         @media (max-width: 768px) {
             width: 90%;
+            margin: 0;
+            padding: 0;
         }
     }
 
@@ -410,6 +412,11 @@ section {
     }
 
     .book-preview-card {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
         text-decoration: none;
         color: inherit;
         margin-top: 20px;
@@ -429,7 +436,8 @@ section {
         }
 
         img.book-cover {
-            width: 100%;
+            max-width: 40%;
+            width:40%;
             height: auto;
             max-height: 30vh;
             object-fit: contain;
@@ -439,16 +447,23 @@ section {
         .preview-content {
             display: flex;
             flex-direction: column;
+            box-sizing: border-box;
+            width: 60%;
+            max-width: 60%;
+            flex-grow: 1;
 
             .preview-title {
-                font-size: 1.5rem;
+                max-width: 100%;
+                word-break: break-word;
+                text-overflow: ellipsis;
+                font-size: 1.7rem;
                 font-weight: bold;
                 color: var(--text-color);
                 margin: 0;
             }
 
             .preview-author {
-                font-size: 0.8rem;
+                font-size: 1.2rem;
                 opacity: 0.6;
                 letter-spacing: 0.05em;
                 margin-bottom: 10px;
@@ -462,6 +477,7 @@ section {
             }
 
             .preview-btn {
+                margin-top: auto; 
                 align-self: flex-end;
             }
         }
