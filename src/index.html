@@ -57,16 +57,59 @@ title: "Yu Chung Yau - Jones Portfolio"
 </section>
 
 <section id="bookshelf">
-    <h2 class="section-title">My Bookself</h2>
+    <h2 class="section-title">My Bookshelf</h2>
     <div class="projects-grid">
         {% for post in collections.books %}
-            <a class="project-card" href="{{ post.url }}">
-                <h3>{{ post.data.title }}</h3>
-                <p>{{ post.data.author }}</p>
-            </a>
+            <div class="project-card-wrapper" data-index="{{ forloop.index0 }}">
+                <button 
+                    type="button" 
+                    class="project-card"
+                    style="--i:{{ forloop.index0 }}; --height: {{ post.data.height | default:'180px' }}; --thickness: {{ post.data.thickness | default:'35px' }};">
+                    <h3>{{ post.data.title }}</h3>
+                    <p>{{ post.data.author }}</p>
+                </button>
+            </div>
         {% endfor %}
     </div>
     <div class="shelf-plank"></div>
+
+    <div class="book-preview-card" data-index="{{ forloop.index0 }}">
+        <div class="preview-content">
+            <h3>Choose Any From Above</h3>
+        </div>
+    </div>
+    {% for post in collections.books %}
+        <div class="book-preview-card hidden" data-index="{{ forloop.index0 }}">
+            <img src="{{ post.data.heroImage }}" alt="Book Cover" class="book-cover" />
+            <div class="preview-content">
+                <h3>{{ post.data.title }}</h3>
+                <p class="preview-author">By {{ post.data.author }}</p>
+                <a href="{{ post.url }}" class="preview-btn">Read Full Review &rarr;</a>
+            </div>
+        </div>
+    {% endfor %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrappers = document.querySelectorAll('#bookshelf .project-card-wrapper');
+            const previewCards = document.querySelectorAll('#bookshelf .book-preview-card');
+
+            function showPreview(targetIndex) {
+                wrappers.forEach(w => w.classList.remove('active'));
+                previewCards.forEach(card => card.classList.add('hidden'));
+                const activeWrapper = document.querySelector(`#bookshelf .project-card-wrapper[data-index="${targetIndex}"]`);
+                if (activeWrapper) activeWrapper.classList.add('active');
+                const activeCard = document.querySelector(`#bookshelf .book-preview-card[data-index="${targetIndex}"]`);
+                if (activeCard) activeCard.classList.remove('hidden');
+            }
+
+            wrappers.forEach(wrapper => {
+                const btn = wrapper.querySelector('.project-card');
+                const index = wrapper.dataset.index;
+                wrapper.addEventListener('mouseenter', () => showPreview(index));
+                btn.addEventListener('click', () => showPreview(index));
+            });
+        });
+    </script>
 </section>
 
 <!-- Education Section -->
