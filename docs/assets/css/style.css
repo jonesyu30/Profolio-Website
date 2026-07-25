@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@200..900&family=Story+Script&display=swap');
+
+
 :root {
     color-scheme: light;
     --text-color: #333333;
@@ -19,6 +22,7 @@
 
 html,
 body {
+    font-family: "Times New Roman", Times, "Noto Serif HK", serif;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -305,6 +309,7 @@ section {
         max-height: 50vh;
     }
 }
+
 #bookshelf {
     color: var(--text-color);
 
@@ -313,31 +318,6 @@ section {
         align-items: flex-end;
         gap: 6px;
         padding-left: 20px;
-    }
-
-    .project-card {
-
-        height: var(--height, 180px);
-        width: var(--thickness, 42px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 10px 4px;
-        background: transparent;
-        border: none;
-        text-decoration: none;
-        color: var(--text-color);
-        border-radius: 2px 4px 4px 2px;
-        cursor: pointer;
-
-        box-shadow: inset 3px 0 5px rgba(255, 255, 255, 0.2),
-            inset -3px 0 5px rgba(0, 0, 0, 0.3),
-            2px 0 5px rgba(0, 0, 0, 0.15);
-
-        animation: spawn 0.24s ease forwards;
-        animation-delay: calc(var(--i) * 0.1s);
-        --start-y: -20px;
-        opacity: 0;
     }
 
     .project-card-wrapper {
@@ -351,44 +331,79 @@ section {
 
         &.active {
             transform: translateY(-12px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card {
+            height: var(--height, 180px);
+            width: var(--thickness, 42px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 4px;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            font-family: inherit;
+
+            box-shadow:
+                inset 3px 0 5px rgba(255, 255, 255, 0.2),
+                inset -3px 0 5px rgba(0, 0, 0, 0.3),
+                2px 0 5px rgba(0, 0, 0, 0.15);
+
+            opacity: 0;
+            animation: spawn 0.24s ease forwards;
+            animation-delay: calc(var(--i) * 0.1s);
+            --start-y: -20px;
+
+            h3,
+            p {
+                writing-mode: vertical-rl;
+                margin: 0;
+                padding: 0;
+                color: var(--text-color);
+            }
+
+            h3 {
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                font-size: 0.65rem;
+                opacity: 0.8;
+            }
         }
     }
 
-    h3 {
-        writing-mode: vertical-rl;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        margin: 0;
-    }
-
-    p {
-        writing-mode: vertical-rl;
-        font-size: 0.65rem;
-        opacity: 0.8;
-        margin: 0;
-    }
-
-    .shelf-plank {
-        height: 12px;
+    .shelf-plank,
+    .book-preview-card {
         width: 50%;
-        background: #3d2b1f; /* Soft dark wood tone */
-        border-radius: 2px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),
-            inset 0 1px 1px rgba(255, 255, 255, 0.2);
 
         @media (max-width: 768px) {
             width: 90%;
         }
     }
 
-    /* Preview Card Below Shelf */
+    .shelf-plank {
+        height: 12px;
+        background: #3d2b1f;
+        /* Soft dark wood tone */
+        border-radius: 2px;
+        box-shadow:
+            0 4px 10px rgba(0, 0, 0, 0.15),
+            inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
     .book-preview-card {
-        width: 50%;
+        text-decoration: none;
+        color: inherit;
         margin-top: 20px;
         padding: 16px 20px;
         border: 1px solid rgba(128, 128, 128, 0.2);
@@ -396,9 +411,25 @@ section {
         background: var(--bg-color, #fff);
         transition: opacity 0.25s ease, transform 0.25s ease;
 
-        @media (max-width: 768px) {
-            width: 90%;
+        &.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(8px);
         }
+
+        &:not(.hidden) {
+            .book-cover {
+                --start-y: -8px;
+                animation: spawn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+
+            .preview-content {
+                --start-y: -6px;
+                animation: spawn 0.1s cubic-bezier(0.16, 1, 0.3, 1) 0.04s forwards;
+                animation-fill-mode: both;
+            }
+        }
+
         img.book-cover {
             width: 100%;
             height: auto;
@@ -407,40 +438,34 @@ section {
             margin-bottom: 12px;
         }
 
-        &.hidden {
-            display: none;
-            opacity: 0;
-            transform: translateY(8px);
-        }
-
-        h3 {
-            writing-mode: horizontal-tb;
-            font-size: 1.1rem;
-            margin-bottom: 4px;
-        }
-
-        .preview-author {
-            writing-mode: horizontal-tb;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 10px;
-        }
-
-        .preview-description {
-            writing-mode: horizontal-tb;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            opacity: 0.9;
-            margin-bottom: 14px;
-        }
         .preview-content {
             display: flex;
             flex-direction: column;
-        }
-        .preview-btn {
-            align-self: flex-end;
+
+            .preview-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--text-color);
+                margin: 0;
+            }
+
+            .preview-author {
+                font-size: 0.8rem;
+                opacity: 0.6;
+                letter-spacing: 0.05em;
+                margin-bottom: 10px;
+            }
+
+            .preview-description {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                opacity: 0.9;
+                margin-bottom: 14px;
+            }
+
+            .preview-btn {
+                align-self: flex-end;
+            }
         }
     }
 }

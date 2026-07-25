@@ -79,14 +79,14 @@ title: "Yu Chung Yau - Jones Portfolio"
         </div>
     </div>
     {% for post in collections.books %}
-        <div class="book-preview-card hidden" data-index="{{ forloop.index0 }}">
+        <a href="{{ post.url }}" class="book-preview-card hidden" data-index="{{ forloop.index0 }}">
             <img src="{{ post.data.heroImage }}" alt="Book Cover" class="book-cover" />
             <div class="preview-content">
-                <h3>{{ post.data.title }}</h3>
+                <h3 class="preview-title">{{ post.data.title }}</h3>
                 <p class="preview-author">By {{ post.data.author }}</p>
-                <a href="{{ post.url }}" class="preview-btn">Read Full Review &rarr;</a>
+                <span class="preview-btn">Read Full Review &rarr;</a>
             </div>
-        </div>
+        </a>
     {% endfor %}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
