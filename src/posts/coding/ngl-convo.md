@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "NGL CONVO"
 description: "Instagram Trend - Annonomous texting"
 heroImage: "https://ngl-convo.vercel.app/_next/image?url=%2FNGL%20CONVO.png&w=256&q=75"
-tags: posts
+tags: ["coding"]
 ---
 
 

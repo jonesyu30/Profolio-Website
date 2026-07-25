@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "Minecraft Animation Tool"
 description: "Viral Youtuber editing style"
 heroImage: "/assets/images/mc-animation-tool.png"
-tags: posts
+tags: ["coding"]
 ---
 ## How I Built a Custom Minecraft Animation Tool (Without Learning Blender)
 

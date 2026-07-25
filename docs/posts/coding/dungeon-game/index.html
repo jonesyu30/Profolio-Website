@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFFDF7">
+    <title>Terra Verde Dungeon</title>
+    
+    <!-- Link to our Eleventy static assets paths -->
+    <link rel="stylesheet" href="/Profolio-Website/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    
+    <script src="/Profolio-Website/assets/js/main.js"></script>
+    <script src="/Profolio-Website/assets/js/contact-me.js" defer=""></script>
+
+    <link rel="icon" href="/Profolio-Website/assets/images/profolio.jpeg" type="image/jpeg">
+
+    <!-- SEO Meta Tags -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yu Chung Yau",
+        "url": "https://jonesyu30.github.io/Profolio-Website",
+        "sameAs": [
+            "https://github.com/jonesyu30",
+            "https://www.instagram.com/jung1yau6/"
+        ],
+        "jobTitle": "Computer Science Student",
+        "affiliation": "The University of Hong Kong"
+        }
+    </script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+    <meta name="description" content="Yu Chung Yau - Jones, a Computer Science student showcasing projects, hobbies, education, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+<section id="hero">
+    <div class="hero-content">
+        <img src="/Profolio-Website/assets/images/dungeon-game.png" alt="Hero Image" class="hero-image">
+        <h5>Jones</h5>
+        <h1>Terra Verde Dungeon</h1>
+        <p>ENGG1340 Project - A console based Dungeon Game</p>
+        
+    </div>
+</section>
+
+<section id="paragraphs">
+    <div class="chapters">
+        
+        <div class="table-of-contents">
+            <h2 class="section-title">Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+
+        <div class="markdown-body">
+            <h2>Chapter 0: The Background</h2>
+<p>This is a group project in the HKU courese: ENGG1340. As one of the prerequiste of this course is ENGG1330, I just formed a group with firend that I found in the previous course. This helps keeping away free riders, which could hugely impact the quality of our product.</p>
+<h2>Chapter 1: The Requirements</h2>
+<p>I wont repeat the entire document of requirement, but I'll just list out some of the important ones for reference:</p>
+<ol>
+<li>Console based game. (Can work through ssh connection).</li>
+<li>Include file writing and reading.</li>
+<li>Allow player to choose among different difficulty levels.</li>
+</ol>
+<h2>Chapter 2: Game Design</h2>
+<p>To design the game, we first asked all of the teamates to brainstorm a game idea, then we vote to decide</p>
+<h2>Video Demo</h2>
+<iframe width="1710" height="751" src="https://www.youtube.com/embed/Mpx_Lhd81ao" title="The boss fight in this dungeon game is crazy." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2>Chapter 3: Final product</h2>
+<p>You can view the video that I took as game play on youtube: <a target="_blank" href="https://youtu.be/Mpx_Lhd81ao?si=J1ORKJHtw7NbaN8Z">https://youtu.be/Mpx_Lhd81ao?si=J1ORKJHtw7NbaN8Z</a>. This video is not the one we submitted, as the submitted video might is not voiced over by me, and my teamates might not want to publish their work/voice.</p>
+<p>And ofcourse, we got an A+, which is just the highest score you can get.</p>
+
+        </div>
+        
+        <footer>
+            <span>Yu Chung Yau @ 25/05/2025</span>
+            <div class="footer-nav">
+                <a href="javascript:history.back()" class="back-home-link">Go Back</a>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<!-- Client Script to generate Table of Contents dynamically from rendered headers -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const tocList = document.getElementById("toc-list");
+    const headers = document.querySelectorAll(".markdown-body h2");
+    
+    if (headers.length === 0) {
+        document.querySelector(".table-of-contents").style.display = "none";
+        return;
+    }
+
+    headers.forEach(header => {
+        // Create a URL-friendly ID from the header text
+        const id = header.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        header.id = id;
+        
+        // Append section divider line styling right above the heading
+        const divider = document.createElement("hr");
+        divider.className = "chapters-divider";
+        divider.style.margin = "3rem 0 1.5rem 0";
+        divider.style.border = "none";
+        divider.style.borderTop = "1px solid var(--dark-color-semi-transparent)";
+        header.parentNode.insertBefore(divider, header);
+
+        // Append item to Table of Contents
+        const li = document.createElement("li");
+        li.className = "toc-list";
+        li.innerHTML = `<a href="#${id}" class="toc-link">${header.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+});
+</script>
+    <section id="contact">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jonesyu30/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:jonesyu30@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/jonesyu30" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </section>
+</body>
+</html>

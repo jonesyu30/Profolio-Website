@@ -50,6 +50,7 @@ body {
         margin: 1vh;
         opacity: 0;
         animation: spawn 0.5s ease forwards;
+        padding: 0rem 1rem;
     }
 
     h1 {
@@ -117,7 +118,7 @@ section {
         animation-delay: calc(var(--i) * 0.15s);
         --start-y: 90px;
         opacity: 0;
-        
+
 
         .card-content {
             height: 100%;
@@ -219,8 +220,9 @@ section {
 }
 
 #contact {
-    min-height:auto;
+    min-height: auto;
     margin-bottom: 2rem;
+
     .social-links {
         display: flex;
         justify-content: center;
@@ -264,7 +266,8 @@ section {
     }
 
     img,
-    iframe,video{
+    iframe,
+    video {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
@@ -286,6 +289,7 @@ section {
         gap: 0.5rem;
     }
 }
+
 .hero-image {
     height: 50vh;
     width: 50vw;
@@ -293,9 +297,74 @@ section {
     align-self: center;
     border-radius: 10px;
     margin-bottom: 2rem;
+
     @media (max-width: 768px) {
         width: 90vw;
         height: auto;
         max-height: 50vh;
+    }
+}
+
+#bookshelf {
+    color: var(--text-color);
+    .projects-grid {
+        display: flex;
+        align-items: flex-end;
+        gap: 6px;
+        padding-left: 20px;
+    }
+
+    .project-card {
+        height: var(--height, 160px);
+        width: var(--thickness, 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px 4px;
+        text-decoration: none;
+        color: var(--text-color);
+        border-radius: 2px 4px 4px 2px;
+        cursor: pointer;
+
+        box-shadow: inset 3px 0 5px rgba(255, 255, 255, 0.2),
+            inset -3px 0 5px rgba(0, 0, 0, 0.3),
+            2px 0 5px rgba(0, 0, 0, 0.15);
+
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: inset 3px 0 5px rgba(255, 255, 255, 0.3),
+            0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+        writing-mode: vertical-rl;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    p {
+        writing-mode: vertical-rl;
+        font-size: 0.6rem;
+        opacity: 0.8;
+    }
+
+    .shelf-plank {
+        height: 12px;
+        width: 50%;
+        background: #3d2b1f;
+        /* Soft dark wood tone */
+        border-radius: 2px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),
+            inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        @media (max-width: 768px) {
+            width: 90%;
+        }
     }
 }

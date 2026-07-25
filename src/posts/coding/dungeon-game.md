@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "Terra Verde Dungeon"
 description: "ENGG1340 Project - A console based Dungeon Game"
 heroImage: "/assets/images/dungeon-game.png"
-tags: posts
+tags: ["coding"]
 ---
 
 

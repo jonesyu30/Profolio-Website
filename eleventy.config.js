@@ -4,8 +4,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addWatchTarget("src/assets/");
   eleventyConfig.addPlugin(HtmlBasePlugin);
-  eleventyConfig.addCollection('posts', (collection) => {
-    return sortByTitle(collection.getFilteredByGlob('./src/posts/*.md').filter(item => item.data.tags && item.data.tags.includes('posts')));
+  eleventyConfig.addCollection('coding', (collection) => {
+    return sortByTitle(collection.getFilteredByGlob('./src/posts/coding/*.md').filter(item => item.data.tags && item.data.tags.includes('coding')));
+  });
+  eleventyConfig.addCollection('books', (collection) => {
+    return sortByTitle(collection.getFilteredByGlob('./src/posts/books/*.md').filter(item => item.data.tags && item.data.tags.includes('books')));
   });
 
 

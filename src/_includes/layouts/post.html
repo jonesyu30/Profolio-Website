@@ -10,6 +10,9 @@ layout: layouts/base.html
         <h5>Jones</h5>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
+        {% if author %}
+            <p>By {{ author }}</p>
+        {% endif %}
     </div>
 </section>
 
@@ -28,7 +31,7 @@ layout: layouts/base.html
         <footer>
             <span>Yu Chung Yau @ {% if date %}{{ date | date: "%d/%m/%Y" }}{% else %}25/05/2025{% endif %}</span>
             <div class="footer-nav">
-                <a href="/#projects" class="back-home-link">View More Projects</a>
+                <a href="javascript:history.back()" class="back-home-link">Go Back</a>
             </div>
         </footer>
     </div>

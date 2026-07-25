@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "Make Art With Love"
 description: "MAWL - A platform to Make Art With LOVE"
 heroImage: "https://raw.githubusercontent.com/jonesyu30/MAWL/main/assets/08a69412-dd0d-46e1-aae4-36f4e3088e47.sketchpad-2.png"
-tags: posts
+tags: ["coding"]
 ---
 
 

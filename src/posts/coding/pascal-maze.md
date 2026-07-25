@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "Pascal Maze"
 description: "HKDSE SBA - A 2D Terminal Maze Game"
 heroImage: "/assets/images/pascal-maze.png"
-tags: posts
+tags: ["coding"]
 ---
 
 

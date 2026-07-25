@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "Tetris Blossom ❀"
 description: "ENGG1330 Project - A Terminal Tetris Clone"
 heroImage: "/assets/images/tetris-blossom.png"
-tags: posts
+tags: ["coding"]
 ---
 
 

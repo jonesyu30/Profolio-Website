@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: "Java Image Postprocessing"
 description: "Box Filter - Evolution Algorithm"
 heroImage: "/assets/images/java-image-postprocessing.png"
-tags: posts
+tags: ["coding"]
 ---
 
 

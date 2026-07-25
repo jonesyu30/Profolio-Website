@@ -14,7 +14,7 @@ title: "Yu Chung Yau - Jones Portfolio"
 <section id="projects">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
-        {% for post in collections.posts %}
+        {% for post in collections.coding %}
             <a class="project-card" href="{{ post.url }}" style="--i:{{ forloop.index0 }};">
               <div class="card-content">
                   {% if post.data.heroImage %}
@@ -56,9 +56,22 @@ title: "Yu Chung Yau - Jones Portfolio"
     </div>
 </section>
 
+<section id="bookshelf">
+    <h2 class="section-title">My Bookself</h2>
+    <div class="projects-grid">
+        {% for post in collections.books %}
+            <a class="project-card" href="{{ post.url }}">
+                <h3>{{ post.data.title }}</h3>
+                <p>{{ post.data.author }}</p>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="shelf-plank"></div>
+</section>
+
 <!-- Education Section -->
 <section id="education">
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title">My Education</h2>
     <div class="projects-grid">
         <div class="project-card">
             <h3>The University of Hong Kong</h3>

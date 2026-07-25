@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFFDF7">
+    <title>The Metamorphosis</title>
+    
+    <!-- Link to our Eleventy static assets paths -->
+    <link rel="stylesheet" href="/Profolio-Website/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    
+    <script src="/Profolio-Website/assets/js/main.js"></script>
+    <script src="/Profolio-Website/assets/js/contact-me.js" defer=""></script>
+
+    <link rel="icon" href="/Profolio-Website/assets/images/profolio.jpeg" type="image/jpeg">
+
+    <!-- SEO Meta Tags -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yu Chung Yau",
+        "url": "https://jonesyu30.github.io/Profolio-Website",
+        "sameAs": [
+            "https://github.com/jonesyu30",
+            "https://www.instagram.com/jung1yau6/"
+        ],
+        "jobTitle": "Computer Science Student",
+        "affiliation": "The University of Hong Kong"
+        }
+    </script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+    <meta name="description" content="Yu Chung Yau - Jones, a Computer Science student showcasing projects, hobbies, education, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+<section id="hero">
+    <div class="hero-content">
+        <img src="https://covers.openlibrary.org/b/isbn/9781587658402-L.jpg" alt="Hero Image" class="hero-image">
+        <h5>Jones</h5>
+        <h1>The Metamorphosis</h1>
+        <p></p>
+        
+            <p>By Franz Kafka</p>
+        
+    </div>
+</section>
+
+<section id="paragraphs">
+    <div class="chapters">
+        
+        <div class="table-of-contents">
+            <h2 class="section-title">Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+
+        <div class="markdown-body">
+            <p>I finished Kafka’s <em>The Metamorphosis</em> on 9 July 2026.</p>
+<p>Right in Chapter One, there's a moment where Gregor Samsa, having just woken up as a giant insect, observes his family and supervisor reacting to his transformation:</p>
+<blockquote>
+<p><em>&quot;If they were startled, then Gregor had no further responsibility and could be calm. But if they took everything quietly, then he, too, had no reason to get excited and, if he hurried, could really be at the station by eight o'clock.&quot;</em></p>
+</blockquote>
+<p>The fact that his very first thought—after literally turning into a beetle—is whether he can still make the 8:00 AM train feels uncomfortably real. It’s that exact sensation when your alarm goes off in the morning, and for a split second, you hope for a sudden crisis, an illness, or turning into a bug just so you have a socially permissible reason to stop working and escape the relentless expectations.</p>
+<hr>
+<h2>1. The &quot;Half-Dead&quot; State and Becoming the Burden</h2>
+<p>Reading about Gregor's new body felt like a terrifying breakdown of control. It’s like living in a &quot;half-dead&quot; state where your body and mind stop cooperating, and you become entirely dependent on your family to survive.</p>
+<p>The worst part isn't even the physical transformation—it's the psychological decay that follows:</p>
+<ul>
+<li><strong>The Loss of Control:</strong> As time goes on, the isolation makes you bitter. You start acting out, doing stupid things, and becoming mad at the people around you. You end up becoming the exact &quot;villain&quot; you swore you'd never be, doing things you hate, purely out of distress and exhaustion.</li>
+<li><strong>The Unspoken Guilt:</strong> You realize you are causing immense trouble for the people you love. You watch yourself transform from the provider into the source of stress, with a terrifying barrier between you and everyone else because nobody understands what you are going through.</li>
+</ul>
+<h2>2. All the Sacrifices, Wiped Out</h2>
+<p>What broke my heart the most was the bitter irony of Gregor’s sacrifices. He worked a soul-crushing job for years to pay off his parents' debts and planned to send his sister to the Conservatory. All that hard work, all those long-term plans to support his family—and in the end, he is hidden away in a dark room, treated like a disgusting secret.</p>
+<p>And the tragic part? You can't even fully blame the family. They are exhausted, scared, and trying to survive. That lack of a clear villain makes the situation feel even more hopeless.</p>
+<h2>3. The Empty Shell and Moving On</h2>
+<p>The ending hits like a cold realization.</p>
+<p>When death finally comes, it almost feels like the best part of the story—the only real relief left. Gregor is reduced to an empty, hardened shell, swept away by the charwoman’s broom like a piece of trash.</p>
+<p>The family immediately goes out for a walk in the warm sunshine, feeling relieved, hopeful, and ready to move on with their lives. Watching life get better for the people you cared for <em>because</em> you are gone, while you were the sole reason things were bad in the first place, is a level of loneliness that’s hard to put into words.</p>
+<hr>
+<h2>The Takeaway</h2>
+<p>Kafka wrote a story about a man turning into a bug, but it’s actually about burnout, existential exhaustion, and the profound fear of becoming a burden to the people you love. It’s short, deeply uncomfortable, and hits way too close to home if you’ve ever felt like a ghost in your own routine.</p>
+
+        </div>
+        
+        <footer>
+            <span>Yu Chung Yau @ 25/05/2025</span>
+            <div class="footer-nav">
+                <a href="javascript:history.back()" class="back-home-link">Go Back</a>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<!-- Client Script to generate Table of Contents dynamically from rendered headers -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const tocList = document.getElementById("toc-list");
+    const headers = document.querySelectorAll(".markdown-body h2");
+    
+    if (headers.length === 0) {
+        document.querySelector(".table-of-contents").style.display = "none";
+        return;
+    }
+
+    headers.forEach(header => {
+        // Create a URL-friendly ID from the header text
+        const id = header.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        header.id = id;
+        
+        // Append section divider line styling right above the heading
+        const divider = document.createElement("hr");
+        divider.className = "chapters-divider";
+        divider.style.margin = "3rem 0 1.5rem 0";
+        divider.style.border = "none";
+        divider.style.borderTop = "1px solid var(--dark-color-semi-transparent)";
+        header.parentNode.insertBefore(divider, header);
+
+        // Append item to Table of Contents
+        const li = document.createElement("li");
+        li.className = "toc-list";
+        li.innerHTML = `<a href="#${id}" class="toc-link">${header.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+});
+</script>
+    <section id="contact">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jonesyu30/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:jonesyu30@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/jonesyu30" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </section>
+</body>
+</html>
