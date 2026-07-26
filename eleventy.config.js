@@ -8,7 +8,7 @@ export default function (eleventyConfig) {
     return sortByTitle(collection.getFilteredByGlob('./src/posts/coding/*.md').filter(item => item.data.tags && item.data.tags.includes('coding')));
   });
   eleventyConfig.addCollection('books', (collection) => {
-    return sortByTitle(collection.getFilteredByGlob('./src/posts/books/*.md').filter(item => item.data.tags && item.data.tags.includes('books')));
+    return sortByDate(collection.getFilteredByGlob('./src/posts/books/*.md').filter(item => item.data.tags && item.data.tags.includes('books')));
   });
 
 
@@ -33,4 +33,13 @@ export default function (eleventyConfig) {
  */
 function sortByTitle(collection) {
   return collection.toSorted((a, b) => { return a.data.title.localeCompare(b.data.title); });
+}
+/**
+ * Sorts a collection by date
+ *
+ * @param {Array} collection The 11ty collection
+ * @returns {Array} the sorted collection
+ */
+function sortByDate(collection) {
+  return collection.toSorted((a, b) => { return a.data["finish-date"] - b.data["finish-date"]; });
 }

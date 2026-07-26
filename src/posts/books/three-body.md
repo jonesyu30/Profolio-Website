@@ -6,6 +6,7 @@ heroImage: "https://covers.openlibrary.org/b/isbn/986120606X-L.jpg"
 tags: ["books"]
 spineColor: '#080f15'
 textColor: '#fdfffc'
+finish-date: 2026-06-29
 ---
 
 I finally finished *The Three-Body Problem* (Book 1). 

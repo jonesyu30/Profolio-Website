@@ -6,6 +6,7 @@ heroImage: "https://covers.openlibrary.org/b/isbn/9781587658402-L.jpg"
 tags: ["books"]
 spineColor: '#6e774a'
 textColor: '#afb38e'
+finish-date: 2026-07-09
 ---
 
 I finished Kafka’s *The Metamorphosis* on 9 July 2026. 

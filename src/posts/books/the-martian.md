@@ -6,6 +6,7 @@ heroImage: "https://covers.openlibrary.org/b/isbn/9780804139021-L.jpg"
 tags: ["books"]
 spineColor: '#cb380d'
 textColor: '#d9bb9f'
+finish-date: 2026-07-23
 ---
 
 I finished *The Martian* on 23 July 2026. 

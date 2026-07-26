@@ -6,6 +6,7 @@ heroImage: "https://covers.openlibrary.org/b/isbn/9781936891023-L.jpg"
 tags: ["books"]
 spineColor: '#ffffff'
 textColor: '#242223'
+finish-date: 2026-06-04
 ---
 
 I finished *The War of Art* by Steven Pressfield on 4 June 2026.

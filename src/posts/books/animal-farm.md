@@ -6,6 +6,7 @@ heroImage: "https://buybookbook.com/cdn/shop/files/619GyNyTTKL._SL1500.jpg?v=176
 tags: ["books"]
 spineColor: '#fffef1'
 textColor: '#22211f'
+finish-date: 2026-06-25
 ---
 
 # Animal Farm: Simple Gaslighting and the Power of a Sharp Ending

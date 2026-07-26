@@ -6,6 +6,7 @@ heroImage: "https://covers.openlibrary.org/b/isbn/9781501160271-L.jpg"
 tags: ["books"]
 spineColor: '#024369'
 textColor: '#cac784'
+finish-date: 2026-07-08
 ---
 
 I finished *Why Fish Don't Exist* on 8 July 2026.

@@ -6,6 +6,7 @@ heroImage: "https://covers.openlibrary.org/b/isbn/9780983748441-L.jpg"
 spineColor: '#f2f0d7'
 textColor: '#b86344'
 tags: ["books"]
+finish-date: 2026-06-20
 ---
 
 # A Short Stay in Hell: What Powers of Years Taught Me About Loneliness
