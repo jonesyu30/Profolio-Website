@@ -327,6 +327,12 @@ section {
         display: flex;
         align-items: flex-end;
         gap: 6px;
+        max-width: 100%;
+        overflow-x: scroll;
+        overflow-y: visible;
+        padding-top: 16px; 
+        margin-top: -16px; 
+        -webkit-overflow-scrolling: touch;
     }
 
     .project-card-wrapper {
@@ -355,7 +361,7 @@ section {
             border-radius: 2px;
             cursor: pointer;
             font-family: inherit;
-            filter: saturate(0.72) sepia(0.08);
+            filter: saturate(0.78) sepia(0.08);
 
             &::before {
                 content: "";

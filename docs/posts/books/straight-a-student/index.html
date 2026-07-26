@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFFDF7">
+    <title>How to Become a Straight-A Student</title>
+    
+    <!-- Link to our Eleventy static assets paths -->
+    <link rel="stylesheet" href="/Profolio-Website/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    
+    <script src="/Profolio-Website/assets/js/main.js"></script>
+    <script src="/Profolio-Website/assets/js/contact-me.js" defer=""></script>
+
+    <link rel="icon" href="/Profolio-Website/assets/images/profolio.jpeg" type="image/jpeg">
+
+    <!-- SEO Meta Tags -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yu Chung Yau",
+        "url": "https://jonesyu30.github.io/Profolio-Website",
+        "sameAs": [
+            "https://github.com/jonesyu30",
+            "https://www.instagram.com/jung1yau6/"
+        ],
+        "jobTitle": "Computer Science Student",
+        "affiliation": "The University of Hong Kong"
+        }
+    </script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+    <meta name="description" content="Yu Chung Yau - Jones, a Computer Science student showcasing projects, hobbies, education, and contact information.">
+</head>
+
+<body>
+    
+<section id="hero">
+    <div class="hero-content">
+        <img src="https://cdn.kobo.com/book-images/57d51c67-5c39-447f-9165-b9fa16622a97/1200/1200/False/how-to-become-a-straight-a-student.jpg" alt="Hero Image" class="hero-image">
+        <h5>Jones</h5>
+        <h1>How to Become a Straight-A Student</h1>
+        <p></p>
+        
+            <p>By Cal Newport</p>
+        
+    </div>
+</section>
+
+<section id="paragraphs">
+    <div class="chapters">
+        
+        <div class="table-of-contents">
+            <h2 class="section-title">Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+
+        <div class="markdown-body">
+            <p>I picked up <em>How to Become a Straight-A Student</em> during my second year of university. The book breaks down concrete strategies for prepping for exams, taking notes, and writing academic papers.</p>
+<p>Full disclosure: I didn't finish the entire book. I skipped the second half because it heavily focuses on essay writing for liberal arts subjects. Since my Computer Science major currently consists almost entirely of heavy math courses, the paper-writing advice wasn't as relevant to my workload. But if you’re in a major that requires writing constant essays, those chapters will be a goldmine.</p>
+<hr>
+<h2>Studying Doesn't Have to Be Painful</h2>
+<p>Beyond the practical study hacks, the most eye-opening takeaway is that <strong>studying shouldn't feel like endless, tedious punishment.</strong></p>
+<p>Coming from Hong Kong and going through the HKDSE system, the cultural norm was to study for 8+ hours a day by sheer willpower. Whether or not it was efficient, staring at notes for hours on end was just what everyone did.</p>
+<p>Newport challenges this head-on: based on interviews with straight-A students worldwide, high-level academic performance comes from <strong>short, intense, highly focused sessions</strong>, not slow, painful hours spent staring passively at textbooks.</p>
+<p>The book covers everything from note-taking systems and exam prep to real-world case studies of students adopting these exact methods. If you're feeling overwhelmed or anxious in college, this is definitely worth a read.</p>
+<hr>
+<p><em>Feel free to drop a comment below and share the books that kickstarted your own reading journey!</em></p>
+
+        </div>
+        
+        <footer>
+            <span>Yu Chung Yau @ 25/05/2025</span>
+            <div class="footer-nav">
+                <a href="javascript:history.back()" class="back-home-link">Go Back</a>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<!-- Client Script to generate Table of Contents dynamically from rendered headers -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const tocList = document.getElementById("toc-list");
+    const headers = document.querySelectorAll(".markdown-body h2");
+    
+    if (headers.length === 0) {
+        document.querySelector(".table-of-contents").style.display = "none";
+        return;
+    }
+
+    headers.forEach(header => {
+        // Create a URL-friendly ID from the header text
+        const id = header.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        header.id = id;
+        
+        // Append section divider line styling right above the heading
+        const divider = document.createElement("hr");
+        divider.className = "chapters-divider";
+        divider.style.margin = "3rem 0 1.5rem 0";
+        divider.style.border = "none";
+        divider.style.borderTop = "1px solid var(--dark-color-semi-transparent)";
+        header.parentNode.insertBefore(divider, header);
+
+        // Append item to Table of Contents
+        const li = document.createElement("li");
+        li.className = "toc-list";
+        li.innerHTML = `<a href="#${id}" class="toc-link">${header.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+});
+</script>
+    <section id="contact">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jonesyu30/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:jonesyu30@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/jonesyu30" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </section>
+</body>
+</html>
