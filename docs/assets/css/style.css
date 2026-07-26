@@ -327,7 +327,6 @@ section {
         display: flex;
         align-items: flex-end;
         gap: 6px;
-        padding-left: 20px;
     }
 
     .project-card-wrapper {
@@ -356,12 +355,22 @@ section {
             border-radius: 2px;
             cursor: pointer;
             font-family: inherit;
+            filter: saturate(0.72) sepia(0.08);
 
-            box-shadow:
-                inset 1px 0 0 rgba(255, 255, 255, 0.25),
-                inset 3px 0 6px rgba(255, 255, 255, 0.15),
-                inset -4px 0 6px rgba(0, 0, 0, 0.45),
-                3px 0 6px rgba(0, 0, 0, 0.2);
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 0);
+                background-size: 3px 3px;
+                opacity: 0.4;
+                pointer-events: none;
+            }
+
+            box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.25),
+            inset 3px 0 6px rgba(255, 255, 255, 0.15),
+            inset -4px 0 6px rgba(0, 0, 0, 0.45),
+            3px 0 6px rgba(0, 0, 0, 0.2);
 
             opacity: 0;
             animation: spawn 0.24s ease forwards;
@@ -406,7 +415,6 @@ section {
 
     .shelf-plank {
         height: 12px;
-        /* Soft dark wood tone */
         border-radius: 2px;
         box-shadow:
             0 4px 10px rgba(0, 0, 0, 0.15),
