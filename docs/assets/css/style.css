@@ -326,12 +326,13 @@ section {
     .projects-grid {
         display: flex;
         align-items: flex-end;
-        gap: 6px;
+        gap: 0.25rem;
         max-width: 100%;
         overflow-x: scroll;
         overflow-y: visible;
-        padding-top: 16px; 
-        margin-top: -16px; 
+        padding-top: 16px;
+        padding-inline: 0.25rem;
+        box-sizing: border-box;
         -webkit-overflow-scrolling: touch;
     }
 
