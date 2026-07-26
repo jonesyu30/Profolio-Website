@@ -269,17 +269,6 @@ section {
         line-height: 1.5;
     }
 
-    ul,
-    ol {
-        font-size: 1.2rem;
-        line-height: 1.5;
-
-        a {
-            text-decoration: none;
-            color: var(--text-color);
-        }
-    }
-
     img,
     iframe,
     video {
