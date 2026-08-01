@@ -114,12 +114,31 @@ section {
         }
     }
 
+    .view-all-card {
+        position: relative;
+        .view-all-text {
+            justify-content: center;
+            align-items: center;
+        }
+
+        i.top-right {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        i.top-left{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
     .project-card-wrapper {
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         @media (hover: hover) {
             &:hover {
-                transform: translateY(-12px);
+                transform: translateY(-1px);
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             }
         }

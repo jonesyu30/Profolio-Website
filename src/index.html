@@ -14,7 +14,7 @@ title: "Yu Chung Yau - Jones Portfolio"
 <section id="projects">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
-        {% for post in collections.coding %}
+        {% for post in collections.coding limit: 4 %}
             <div class="project-card-wrapper">
                 <a class="project-card" href="{{ post.url }}" style="--i:{{ forloop.index0 }};">
                 <div class="card-content">
@@ -32,6 +32,17 @@ title: "Yu Chung Yau - Jones Portfolio"
                 </a>
             </div>
         {% endfor %}
+        <div class="project-card-wrapper view-all-wrapper">
+            <a class="project-card view-all-card" href="/projects" style="--i:4;">
+                <div class="card-content view-all-content">
+                    <div class="card-text view-all-text">
+                        <h3>View All Projects</h3>
+                        <p class="card-description">Check out my full project portfolio</p>
+                    <i class="fa fa-external-link top-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 </section>
 

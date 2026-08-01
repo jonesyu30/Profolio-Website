@@ -10,6 +10,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('books', (collection) => {
     return sortByDate(collection.getFilteredByGlob('./src/posts/books/*.md').filter(item => item.data.tags && item.data.tags.includes('books')));
   });
+  eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, parseInt(limit, 10)));
 
 
 
