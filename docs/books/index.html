@@ -37,6 +37,9 @@
 
 <body>
     
+<!-- To be implemetned: 
+ 1. sort by color, with animation so that it is satisfying
+ 2. show unfinished books, and potential books  -->
 <section id="bookshelf">
     <h2 class="section-title">My Bookshelf</h2>
     <div class="projects-grid">
@@ -129,6 +132,13 @@
                 <button type="button" class="project-card" style="--i:12; --spine-color: #ffcc23; --spine-text-color: #1f1c17;">
                     <h3>Dopamine Detox</h3>
                     <p>Thibaut Meurisse</p>
+                </button>
+            </div>
+        
+            <div class="project-card-wrapper" data-index="13">
+                <button type="button" class="project-card" style="--i:13; --spine-color: #123a91; --spine-text-color: #f2f0f1;">
+                    <h3>The Little Prince</h3>
+                    <p>Antoine de Saint-Exupéry</p>
                 </button>
             </div>
         
@@ -266,6 +276,16 @@
             <div class="preview-content">
                 <h3 class="preview-title">Dopamine Detox</h3>
                 <p class="preview-author">By Thibaut Meurisse</p>
+                <p class="preview-description"></p>
+                <span class="preview-btn">Read Full Review &rarr;</span>
+            </div>
+        </a>
+    
+        <a href="/Profolio-Website/posts/books/the-little-prince/" class="book-preview-card hidden" data-index="13">
+            <img src="https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg" alt="Book Cover" class="book-cover">
+            <div class="preview-content">
+                <h3 class="preview-title">The Little Prince</h3>
+                <p class="preview-author">By Antoine de Saint-Exupéry</p>
                 <p class="preview-description"></p>
                 <span class="preview-btn">Read Full Review &rarr;</span>
             </div>
