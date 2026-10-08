@@ -8,8 +8,9 @@ permalink: /books/index.html
  1. sort by color, with animation so that it is satisfying
  2. show unfinished books, and potential books  -->
 <section id="bookshelf">
+    <script src="/assets/js/utils.js"></script>
     <h2 class="section-title">My Bookshelf</h2>
-    <div class="projects-grid">
+    <div class="projects-grid" id="projects-grid">
         {% for post in collections.books %}
             <div class="project-card-wrapper" data-index="{{ forloop.index0 }}">
                 <button 
@@ -23,6 +24,9 @@ permalink: /books/index.html
         {% endfor %}
     </div>
     <div class="shelf-plank"></div>
+    <div>
+        <button id="sort-by-color" class="sort-button">Sort by Color</button>
+    </div>
 
     <div class="book-preview-card" data-index="{{ forloop.index0 }}">
         <div class="preview-content">
@@ -59,6 +63,38 @@ permalink: /books/index.html
                 const index = wrapper.dataset.index;
                 wrapper.addEventListener('mouseenter', () => showPreview(index));
                 btn.addEventListener('click', () => showPreview(index));
+            });
+
+            async function moveBooks(sortedWrappers){
+                for (let i = 0; i < sortedWrappers.length; i++) {
+                    if(wrappers[i].style.order == sortedWrappers.indexOf(wrappers[i])) continue;
+                    wrappers[i].style.order = sortedWrappers.indexOf(wrappers[i]);
+                    sortedWrappers[i].style.order = i;
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+            }
+
+            const sortButton = document.getElementById('sort-by-color');
+            const projectGrid = document.getElementById('projects-grid');
+            sortButton.addEventListener('click', async () => {
+                const sortedWrappers = Array.from(wrappers).sort((a, b) => {
+                    const colorA = a.querySelector('.project-card').style.getPropertyValue('--spine-color').trim();
+                    const colorB = b.querySelector('.project-card').style.getPropertyValue('--spine-color').trim();
+                    
+                    const hslA = hexToHsl(colorA);
+                    const hslB = hexToHsl(colorB);
+
+                    if (Math.abs(hslA.l - hslB.l) > 10) {
+                        return hslA.l - hslB.l;
+                    }
+                    if (Math.abs(hslA.s - hslB.s) > 10) {
+                        return hslA.s - hslB.s;
+                    }
+                    if (hslA.h !== hslB.h) {
+                        return hslA.h - hslB.h;
+                    }
+                });
+                await moveBooks(sortedWrappers);
             });
         });
     </script>
