@@ -159,10 +159,17 @@
         
     </div>
     <div class="shelf-plank"></div>
+    <div style="display: flex;">
     <div>
         <button id="sort-by-color" class="sort-button">Sort by Color</button>
     </div>
-
+    <div>
+        <button id="sort-by-name" class="sort-button">Sort by Name</button>
+    </div>
+    <div>
+        <button id="sort-by-date" class="sort-button">Sort by Date</button>
+    </div>
+    </div>
     <div class="book-preview-card" data-index="">
         <div class="preview-content">
             <h3>Choose The Book You Like</h3>
@@ -359,9 +366,9 @@
                 }
             }
 
-            const sortButton = document.getElementById('sort-by-color');
+            const sortColorButton = document.getElementById('sort-by-color');
             const projectGrid = document.getElementById('projects-grid');
-            sortButton.addEventListener('click', async () => {
+            sortColorButton.addEventListener('click', async () => {
                 const sortedWrappers = Array.from(wrappers).sort((a, b) => {
                     const colorA = a.querySelector('.project-card').style.getPropertyValue('--spine-color').trim();
                     const colorB = b.querySelector('.project-card').style.getPropertyValue('--spine-color').trim();
@@ -381,6 +388,26 @@
                 });
                 await moveBooks(sortedWrappers);
             });
+            const sortNameButton = document.getElementById('sort-by-name');
+            sortNameButton.addEventListener('click', async () => {
+                const sortedWrappers = Array.from(wrappers).sort((a, b) => {
+                    const nameA = a.querySelector('.project-card h3').textContent.trim().toLowerCase();
+                    const nameB = b.querySelector('.project-card h3').textContent.trim().toLowerCase();
+                    return nameA.localeCompare(nameB);
+                });
+                await moveBooks(sortedWrappers);
+            });
+            const sortDateButton = document.getElementById('sort-by-date');
+            sortDateButton.addEventListener('click', async () => {
+                const sortedWrappers = Array.from(wrappers).sort((a, b) => {
+                    const dateA = new Date(a.querySelector('.project-card').dataset.date);
+                    const dateB = new Date(b.querySelector('.project-card').dataset.date);
+                    return dateA - dateB;
+                });
+                await moveBooks(sortedWrappers);
+            });
+                    
+
         });
     </script>
 </section>
