@@ -9,33 +9,6 @@ textColor: '#fafcfb'
 finish-date: 2026-10-28
 ---
 
-I finished reading *The Dark Forest* (Book 2 of the Three-Body trilogy) on 28 October 2026.
-
-This book is an absolute masterpiece. Even though I already knew parts of the plot from listening to Lao Gao videos years ago, knowing the general story line didn't ruin a single second of the experience. The introduction and execution of Luo Ji (邏輯) is as impressive as it gets.
-
-The imagery Cixin Liu builds is unreal—visualizing how a single, pristine **Water Droplet** travels through thousands of human warships, punching through hull after hull, turning the entire fleet into a burning, red hell in space. The human reactions throughout the book feel so naive and dumb, yet so painfully accurate to how society actually operates when faced with extinction. Science, technology, sociology, and art are all woven together seamlessly.
-
-I tried not to highlight too many passages on my Kobo because individual lines lose their weight out of context, but a few quotes and scenes stood out.
-
----
-
-## 1. Love and Idealized Illusions
-
-A surprisingly large portion of Luo Ji's early arc revolves around the concept of love and human imagination:
-
-> *"不是的，大部分人的愛情對象也只是存在於自己的想像之中... 他們遲早會發現夢中情人與模板之間的差異... 如果無法適應就分開..."*  
-> *(No, most people's objects of love exist```markdown
----
-layout: layouts/post.html
-title: "The Dark Forest (三體II：黑暗森林)"
-author: "Cixin Liu (劉慈欣)"
-heroImage: "[https://covers.openlibrary.org/b/isbn/9780765377081-L.jpg](https://covers.openlibrary.org/b/isbn/9780765377081-L.jpg)"
-tags: ["books"]
-spineColor: '#0b131f'
-textColor: '#ffffff'
-finish-date: 2026-10-28
----
-
 I finished *The Dark Forest* on 28 October 2026. 
 
 This book is an absolute masterpiece. No wonder people praise it endlessly. Even though I already knew parts of the storyline beforehand (thanks to Lao Gao videos) and knew about Luo Ji (邏輯) and his Wallfacer plan, reading the actual text didn't make the experience any weaker. If anything, it made it infinitely heavier.
@@ -78,8 +51,9 @@ This leads to some of the most haunting scenes in the entire book. Like the star
 
 It brings back those classic moral dilemma debates from primary school—like the "Hot Air Balloon" debate where someone has to be thrown overboard so the rest can survive:
 
-* Do you throw out the doctor, the farmer, the elder, or the child?
-* Is it better to make a cold, logical decision, or refuse to choose at all?
+Do you throw out the doctor, the farmer, the elder, or the child?
+
+Is it better to make a cold, logical decision, or refuse to choose at all?
 
 *The Dark Forest* shows that in extreme survival scenarios, **the worst decision is not making one**. Making the logical choice feels suffocating, but waiting for someone else to step up and make it for you is just human laziness.
 
