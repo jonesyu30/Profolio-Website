@@ -6,8 +6,9 @@ heroImage: "https://covers.openlibrary.org/b/isbn/9861208917-L.jpg"
 tags: ["books"]
 spineColor: '#081811'
 textColor: '#fafcfb'
-finish-date: 2026-10-28
+finish-date: 2026-11-22
 ---
+Finished on 22 Nov 2026.
 
 This is crazy, officially done, the longest series of books i have ever read in my life. The author just said, what if the world collapses, and then this book is written. The entire universe, the physical laws, the humanity, human, love, responsibilities, everything is gone. There’s a feeling of helplessness, i am not sure if this is hindering my emotions these days, but there is definitely a feeling of suffocation at the end of the chapters, that human has already lost, as a species, it is sad, but it is just the law of the universe, everything dies, death is the only thing that goes to eternity. 
 I dont know if this is a good ending, but it is an ending, like there isnt really anything after this, the universe will collapse. 
